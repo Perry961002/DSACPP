@@ -8,7 +8,9 @@
 #include <iostream>
 #include <sstream>
 #include "linearList.h"
+#include "changeLength1D.h"
 #include "MyExceptions.h"
+
 using namespace std;
 
 template <class T>
@@ -65,7 +67,7 @@ arrayList<T>::arrayList(const arrayList<T>& theList) {
 
 template <class T>
 void arrayList<T>::checkIndex(int theIndex) const {
-    //确定索引theIndex在0 和listSize - 1之间
+    //确定索引theIndex在0 和 listSize - 1之间
     if(theIndex < 0 || theIndex >= listSize){
         ostringstream s;
         s << "index = " << theIndex << "size = " << listSize;
@@ -97,7 +99,55 @@ int arrayList<T>::indexOf(const T &theElement) const {
         return theIndex;
 }
 
+template <class T>
+void arrayList<T>::erase(int theIndex) {
+    // 删除索引theIndex上的元素
+    //如果元素不存在，则抛出异常
+    checkIndex(theIndex);
 
+    // 索引有效，则把索引大于theIndex的元素都向前移动
+    copy(element + theIndex + 1, element + listSize, element + theIndex);
 
+    //调用析构函数
+    element[--listSize].~T();
+}
+
+template <class T>
+void arrayList<T>::insert(int theIndex, const T &theElement) {
+    // 在索引 theIndex 的位置上插入元素 theElement
+
+    if(theIndex < 0 || theIndex > listSize){
+        //无效的索引
+        ostringstream s;
+        s << "Index  " << theIndex << " size = " << listSize;
+        throw illegalParameterValue(s.str());
+    }
+
+    //有效的索引，确定数组是否已满
+    if(listSize == arrayLength){
+        //数组空间已满。数组长度倍增
+        changeLength1D(element, arrayLength, 2 * arrayLength);
+        arrayLength *= 2;
+    }
+
+    //把索引 theIndex 之后的元素向右移动一个位置
+    copy_backward(element + theIndex, element + listSize, element + listSize + 1);
+
+    element[theIndex] = theElement;
+    ++listSize;
+}
+
+template <class T>
+void arrayList<T>::output(ostream &out) const {
+    //把线性表插入到输出流
+    copy(element, element + listSize, ostream_iterator<T>(cout, " "));
+}
+
+//重载 <<
+template <class T>
+ostream& operator<<(ostream& out, const arrayList<T>& x){
+    x.output(out);
+    return out;
+}
 
 #endif //DSACPP_ARRAYLIST_H
