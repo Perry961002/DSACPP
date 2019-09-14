@@ -9,14 +9,28 @@ int main() {
     }
     cout << nums1.get(3) << endl;
     cout << nums1 << endl;
-    cout << nums1[5]<< endl;
+    //nums1[5] = 0;
+    cout << nums1[5] << endl;
     cout << (nums1 == nums2) << endl;
     cout << (nums1 != nums2) << endl;
+    cout << (nums1 < nums2) << endl;
     nums1.pop_back();
     cout << nums1 << endl;
     cout << (nums1 != nums2) << endl;
     nums1.push_back(11);
     cout << nums1 << endl;
+    cout << (nums1 > nums2) << endl;
+
+    nums1.setSize(7);
+    nums1.set(6, 8);
+    cout << nums1 << endl;
+
+    nums1.removeRange(2, 5);
+    cout << nums1 << endl;
+
+    nums2.reverse();
+    cout << nums2 << endl;
+    nums2.clear();
 
     return 0;
 }

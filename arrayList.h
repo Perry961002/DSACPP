@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <functional>
 #include "linearList.h"
 #include "changeLength1D.h"
 #include "MyExceptions.h"
@@ -34,14 +35,32 @@ public:
     //给出数组当前的长度
     int capacity() const {return arrayLength;};
 
+    //返回指定元素最后出现时的索引
+    int lastIndex(const T& theElement) const;
+
     //尾插入
     void push_back(const T& theElement);
 
     //尾弹出
     void pop_back();
 
+    //设置大小
+    void setSize(const int theSize);
+
+    //用元素theElement替换索引为theIndex的元素
+    void set(const int theIndex, const T& theElement);
+
+    //删除指定范围内的所有元素
+    void removeRange(const int beginIndex, const int endIndex);
+
+    //翻转数组
+    void reverse();
+
+    //清空数组
+    void clear();
+
     //重载[]运算符
-    T& operator[](const int theIndex){
+    T& operator[](const int theIndex) {
         //返回数组在索引theIndex上的引用
 
         //检查索引是否有效
@@ -50,7 +69,7 @@ public:
     }
 
     //重载==运算符
-    bool operator==(const arrayList<T>& theList){
+    bool operator==(const arrayList<T>& theList) const {
         //返回是否和theList相等
         //数组长度相同，且每个元素都相等
         if(listSize != theList.listSize)
@@ -65,7 +84,7 @@ public:
     }
 
     //重载!=运算符
-    bool operator!=(const arrayList<T>& theList){
+    bool operator!=(const arrayList<T>& theList) const {
         if(listSize != theList.listSize)
             return true;
         int i = 0, j = 0;
@@ -73,12 +92,51 @@ public:
             if(element[i] == theList.element[j]) {
                 ++i;
                 ++j;
-            }
+            } else
+                return false;
         }
         if(i == listSize && i == theList.listSize)
             return false;
         else
             return true;
+    }
+
+    //重载<
+    bool operator<(const arrayList<T>& theList) const {
+        //字典序的小于
+        int i = 0, j = 0;
+        while(i < listSize && j < theList.listSize){
+            if(element[i] == theList.element[j]){
+                ++i;
+                ++j;
+            }else if(element[i] < theList.element[j]){
+                return true;
+            }else
+                return false;
+        }
+        if(i < j)
+            return true;
+        else
+            return false;
+    }
+
+    //重载>运算符
+    bool operator>(const arrayList<T>& theList) const {
+        //字典序的小于
+        int i = 0, j = 0;
+        while(i < listSize && j < theList.listSize){
+            if(element[i] == theList.element[j]){
+                ++i;
+                ++j;
+            }else if(element[i] > theList.element[j]){
+                return true;
+            }else
+                return false;
+        }
+        if(i > j)
+            return true;
+        else
+            return false;
     }
 
 protected:
@@ -144,6 +202,23 @@ int arrayList<T>::indexOf(const T &theElement) const {
         return -1;
     else
         return theIndex;
+}
+
+//返回指定元素最后出现时的索引
+template <class T>
+int arrayList<T>::lastIndex(const T &theElement) const {
+    //返回元素theElement最后一次出现时的索引
+    //若元素不存在，则返回 -1
+
+    //查找元素theElement
+    int i;
+    for(i = listSize - 1; i >=0; --i){
+        if(element[i] == theElement)
+            return i;
+    }
+    //没有找到
+    if(i < 0)
+        return -1;
 }
 
 template <class T>
@@ -214,5 +289,64 @@ template <class T>
 void arrayList<T>::pop_back() {
     element[--listSize].~T();
 }
+
+//设置数组大小
+template <class T>
+void arrayList<T>::setSize(const int theSize) {
+    //如果数组的初始大小小于等于指定的值，则不增加元素
+    //如果数组的初始大小大于指定的值，则删除多余元素
+    if(theSize < 0){
+        ostringstream s;
+        s << "Set size = " << theSize << "Must be >= 0";
+        throw illegalParameterValue(s.str());
+    }
+    if(listSize > theSize){
+        while(listSize > theSize)
+            element[--listSize].~T();
+    }
+}
+
+//用元素theElement替换索引为theIndex的元素
+template <class T>
+void arrayList<T>::set(const int theIndex, const T& theElement) {
+    //超出索引，则抛出异常
+    checkIndex(theIndex);
+    element[theIndex] = theElement;
+}
+
+//删除指定范围内的所有元素
+template <class T>
+void arrayList<T>::removeRange(const int beginIndex, const int endIndex) {
+    //确定索引是否有效
+    if(beginIndex < 0 || endIndex >= listSize){
+        //无效的索引
+        ostringstream s;
+        s << "Index  from" << beginIndex << " to " << endIndex << " size = " << listSize;
+        throw illegalParameterValue(s.str());
+    }
+    copy(element + endIndex + 1, element + listSize, element + beginIndex);
+    setSize(listSize - (endIndex - beginIndex + 1));
+}
+
+//翻转数组
+template <class T>
+void arrayList<T>::reverse() {
+    int i = 0, j = listSize - 1;
+    while(i < j){
+        if(element[i] != element[j]){
+            swap(element[i], element[j]);
+        }
+        ++i;
+        --j;
+    }
+}
+
+//清空数组
+template <class T>
+void arrayList<T>::clear() {
+    while(listSize > 0)
+        element[--listSize].~T();
+}
+
 
 #endif //DSACPP_ARRAYLIST_H
