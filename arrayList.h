@@ -34,6 +34,12 @@ public:
     //给出数组当前的长度
     int capacity() const {return arrayLength;};
 
+    //尾插入
+    void push_back(const T& theElement);
+
+    //尾弹出
+    void pop_back();
+
     //重载[]运算符
     T& operator[](const int theIndex){
         //返回数组在索引theIndex上的引用
@@ -45,8 +51,36 @@ public:
 
     //重载==运算符
     bool operator==(const arrayList<T>& theList){
-
+        //返回是否和theList相等
+        //数组长度相同，且每个元素都相等
+        if(listSize != theList.listSize)
+            return false;
+        int i = 0, j = 0;
+        while(i < listSize && j < theList.listSize){
+            if(element[i] != theList.element[j])
+                return false;
+            ++i;++j;
+        }
+        return true;
     }
+
+    //重载!=运算符
+    bool operator!=(const arrayList<T>& theList){
+        if(listSize != theList.listSize)
+            return true;
+        int i = 0, j = 0;
+        while(i < listSize && j < theList.listSize){
+            if(element[i] == theList.element[j]) {
+                ++i;
+                ++j;
+            }
+        }
+        if(i == listSize && i == theList.listSize)
+            return false;
+        else
+            return true;
+    }
+
 protected:
     //若索引theIndex无效，则抛出异常
     void checkIndex(int theIndex) const;
@@ -161,6 +195,24 @@ template <class T>
 ostream& operator<<(ostream& out, const arrayList<T>& x){
     x.output(out);
     return out;
+}
+
+//尾插法
+template <class T>
+void arrayList<T>::push_back(const T &theElement) {
+    //有效的索引，确定数组是否已满
+    if(listSize == arrayLength){
+        //数组空间已满。数组长度倍增
+        changeLength1D(element, arrayLength, 2 * arrayLength);
+        arrayLength *= 2;
+    }
+    element[listSize++] = theElement;
+}
+
+//尾弹出
+template <class T>
+void arrayList<T>::pop_back() {
+    element[--listSize].~T();
 }
 
 #endif //DSACPP_ARRAYLIST_H
