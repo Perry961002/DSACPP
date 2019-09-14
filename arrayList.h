@@ -34,6 +34,19 @@ public:
     //给出数组当前的长度
     int capacity() const {return arrayLength;};
 
+    //重载[]运算符
+    T& operator[](const int theIndex){
+        //返回数组在索引theIndex上的引用
+
+        //检查索引是否有效
+        checkIndex(theIndex);
+        return element[theIndex];
+    }
+
+    //重载==运算符
+    bool operator==(const arrayList<T>& theList){
+
+    }
 protected:
     //若索引theIndex无效，则抛出异常
     void checkIndex(int theIndex) const;
