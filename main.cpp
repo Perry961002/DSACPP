@@ -21,7 +21,8 @@ int main() {
     cout << nums1 << endl;
     cout << (nums1 > nums2) << endl;
 
-    nums1.setSize(7);
+    nums1.setSize(20);
+    cout << "size:" << nums1.size() << endl;
     nums1.set(6, 8);
     cout << nums1 << endl;
 
@@ -30,6 +31,10 @@ int main() {
 
     nums2.reverse();
     cout << nums2 << endl;
+
+    nums1.swap(nums2);
+    cout << nums1 << endl << nums2 << endl;
+
     nums2.clear();
 
     return 0;

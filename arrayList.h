@@ -45,22 +45,28 @@ public:
     void pop_back();
 
     //设置大小
-    void setSize(const int theSize);
+    void setSize(int theSize);
+
+    //改变数组的容量为当前容量和theCapacity的较大者
+    void reserve(int theCapacity);
 
     //用元素theElement替换索引为theIndex的元素
-    void set(const int theIndex, const T& theElement);
+    void set(int theIndex, const T& theElement);
 
     //删除指定范围内的所有元素
-    void removeRange(const int beginIndex, const int endIndex);
+    void removeRange(int beginIndex, int endIndex);
 
     //翻转数组
     void reverse();
+
+    //交换两个数组
+    void swap(arrayList<T>& theList);
 
     //清空数组
     void clear();
 
     //重载[]运算符
-    T& operator[](const int theIndex) {
+    T& operator[](int theIndex) {
         //返回数组在索引theIndex上的引用
 
         //检查索引是否有效
@@ -292,7 +298,7 @@ void arrayList<T>::pop_back() {
 
 //设置数组大小
 template <class T>
-void arrayList<T>::setSize(const int theSize) {
+void arrayList<T>::setSize(int theSize) {
     //如果数组的初始大小小于等于指定的值，则不增加元素
     //如果数组的初始大小大于指定的值，则删除多余元素
     if(theSize < 0){
@@ -303,12 +309,26 @@ void arrayList<T>::setSize(const int theSize) {
     if(listSize > theSize){
         while(listSize > theSize)
             element[--listSize].~T();
+    } else if(theSize > arrayLength){
+        //数组空间已满，修改数组长度
+        changeLength1D(element, arrayLength, theSize + arrayLength);
+        arrayLength += theSize;
+    }
+    listSize = theSize;
+}
+
+//改变数组的容量为当前容量和theCapacity的较大者
+template <class T>
+void arrayList<T>::reserve(int theCapacity) {
+    if(theCapacity > arrayLength){
+        changeLength1D(element, arrayLength, theCapacity);
+        arrayLength = theCapacity;
     }
 }
 
 //用元素theElement替换索引为theIndex的元素
 template <class T>
-void arrayList<T>::set(const int theIndex, const T& theElement) {
+void arrayList<T>::set(int theIndex, const T& theElement) {
     //超出索引，则抛出异常
     checkIndex(theIndex);
     element[theIndex] = theElement;
@@ -316,7 +336,7 @@ void arrayList<T>::set(const int theIndex, const T& theElement) {
 
 //删除指定范围内的所有元素
 template <class T>
-void arrayList<T>::removeRange(const int beginIndex, const int endIndex) {
+void arrayList<T>::removeRange(int beginIndex, int endIndex) {
     //确定索引是否有效
     if(beginIndex < 0 || endIndex >= listSize){
         //无效的索引
@@ -334,11 +354,32 @@ void arrayList<T>::reverse() {
     int i = 0, j = listSize - 1;
     while(i < j){
         if(element[i] != element[j]){
-            swap(element[i], element[j]);
+            //swap(element[i], element[j]);
+            T temp = element[i];
+            element[i] = element[j];
+            element[j] = temp;
         }
         ++i;
         --j;
     }
+}
+
+//交换两个数组
+template <class T>
+void arrayList<T>::swap(arrayList<T> &theList) {
+    //如果当前数组的容量更大，则将theList扩容
+    if(arrayLength > theList.arrayLength)
+        theList.reserve(arrayLength);
+    else
+        reserve(theList.arrayLength);
+    for(int i = 0; i < max(listSize, theList.listSize); ++i){
+        T temp = element[i];
+        element[i] = theList.element[i];
+        theList.element[i] = temp;
+    }
+    int temp = listSize;
+    listSize = theList.listSize;
+    theList.listSize = temp;
 }
 
 //清空数组
