@@ -3,4 +3,4 @@ project(DSACPP)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(DSACPP main.cpp MyExceptions.h linearList.h changeLength1D.h arrayList.h)
+add_subdirectory(Chap5_LinearList)
