@@ -7,7 +7,6 @@
 
 #include <iostream>
 #include <sstream>
-#include <functional>
 #include "linearList.h"
 #include "changeLength1D.h"
 #include "MyExceptions.h"
@@ -90,8 +89,8 @@ protected:
     T* element; //存储线性表元素的一维数组
     int arrayLength;  //一维数组的容量
     int listSize;  //线性表的元素个数
-
-    // 内部类, 迭代器
+public:
+    // 内部类, 迭代器，可以随机访问
     class iterator{
     public:
         typedef bidirectional_iterator_tag iterator_category;  // 双向迭代器
@@ -116,6 +115,17 @@ protected:
             return old;
         }
 
+        iterator operator+(const difference_type& n){
+            // +运算符, 实现随机访问
+            iterator old = *this;
+            old.position += n;
+            return old;
+        }
+        iterator operator+=(const difference_type& n){
+            position += n;
+            return *this;
+        }
+
         // 迭代器减少
         iterator& operator--() {--position; return *this;}  // 前置
         iterator operator--(int){
@@ -125,14 +135,33 @@ protected:
             return old;
         }
 
+        iterator operator-(const difference_type & n){
+            // -运算符，实现随机访问
+            iterator old = *this;
+            old.position -= n;
+            return old;
+        }
+        iterator operator-=(const difference_type& n){
+            position -= n;
+            return *this;
+        }
+
+        // 计算指针之间距离的差值
+        difference_type operator-(const iterator& theIterator) const{
+            return position - theIterator.position;
+        }
+
         //测试是否相等
         bool operator!=(const iterator right) const {return position != right.position;}
         bool operator==(const iterator right) const {return position == right.position;}
+        bool operator<(const iterator right) const {return position < right.position;}
+        bool operator<=(const iterator right) const {return position <= right.position;}
+        bool operator>(const iterator right) const {return position > right.position;}
+        bool operator>=(const iterator right) const {return position >= right.position;}
     protected:
         T* position;  //指向表元素的指针
     };
 
-public:
     // 返回首元素和尾元素下一个位置的迭代器
     iterator begin() {return iterator(element);}
     iterator end() {return iterator(element + listSize);}

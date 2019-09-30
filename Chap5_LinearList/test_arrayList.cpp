@@ -33,6 +33,9 @@ int main() {
     nums2.reverse();
     cout << nums2 << endl;
 
+    sort(nums2.begin(), nums2.end());
+    cout << nums2 << endl;
+
     reverse(nums2.begin(), nums2.end());
     cout << nums2 << endl;
 

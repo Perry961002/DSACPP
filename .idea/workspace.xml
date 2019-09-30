@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
+      <config projectName="DSACPP" targetName="vectorList" />
       <config projectName="DSACPP" targetName="arrayList" />
     </generated>
   </component>
@@ -12,7 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6fe4dbf-f37f-49fb-95f5-05293a281ef0" name="Default Changelist" comment="修改工程里的文件目录">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chap5_LinearList/vectorList.h" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.3/CMakeCCompiler.cmake" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake" afterDir="false" />
@@ -65,7 +66,6 @@
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/arrayList.dir/flags.make" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/arrayList.dir/link.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/arrayList.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/arrayList.dir/test_arrayList.cpp.o" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/progress.marks" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/Chap5" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/Makefile" afterDir="false" />
@@ -75,6 +75,8 @@
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/DSACPP.cbp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chap5_LinearList/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Chap5_LinearList/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chap5_LinearList/arrayList.h" beforeDir="false" afterPath="$PROJECT_DIR$/Chap5_LinearList/arrayList.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chap5_LinearList/test_arrayList.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Chap5_LinearList/test_arrayList.cpp" afterDir="false" />
     </list>
@@ -91,7 +93,39 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Chap5_LinearList/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chap5_LinearList/arrayList.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chap5_LinearList/vectorList.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+              <folding>
+                <element signature="e#99#122#0" expanded="true" />
+                <element signature="e#182#191#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -138,8 +172,9 @@
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Chap5_LinearList/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/Chap5_LinearList/arrayList.h" />
         <option value="$PROJECT_DIR$/Chap5_LinearList/test_arrayList.cpp" />
+        <option value="$PROJECT_DIR$/Chap5_LinearList/arrayList.h" />
+        <option value="$PROJECT_DIR$/Chap5_LinearList/vectorList.h" />
       </list>
     </option>
   </component>
@@ -161,6 +196,11 @@
             <path>
               <item name="DSACPP" type="b2602c69:ProjectViewProjectNode" />
               <item name="DSACPP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DSACPP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DSACPP" type="462c0819:PsiDirectoryNode" />
+              <item name="Chap5_LinearList" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -192,12 +232,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="CMake Application.arrayList">
     <configuration name="arrayList" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DSACPP" TARGET_NAME="arrayList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DSACPP" RUN_TARGET_NAME="arrayList">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="vectorList" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DSACPP" TARGET_NAME="vectorList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DSACPP" RUN_TARGET_NAME="vectorList">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.arrayList" />
+      <item itemvalue="CMake Application.vectorList" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -254,7 +303,7 @@
       <workItem from="1569719465135" duration="2398000" />
       <workItem from="1569810709723" duration="630000" />
       <workItem from="1569812555581" duration="1256000" />
-      <workItem from="1569823042686" duration="5454000" />
+      <workItem from="1569823042686" duration="15205000" />
     </task>
     <task id="LOCAL-00001" summary="完成书上的案例代码">
       <created>1568013042696</created>
@@ -298,21 +347,29 @@
       <option name="project" value="LOCAL" />
       <updated>1568638096537</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="将重载的关系运算符修改为非成员函数，添加内部类迭代器">
+      <created>1569829081570</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1569829081570</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64291000" />
+    <option name="totallyTimeSpent" value="74042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="958" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14713065" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14713065" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24249423" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43418014" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -361,7 +418,8 @@
     <MESSAGE value="写的题目懒得去数了" />
     <MESSAGE value="修改setSize里没有考虑到容量的大小的错误，增加reserve和swap方法" />
     <MESSAGE value="修改工程里的文件目录" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改工程里的文件目录" />
+    <MESSAGE value="将重载的关系运算符修改为非成员函数，添加内部类迭代器" />
+    <option name="LAST_COMMIT_MESSAGE" value="将重载的关系运算符修改为非成员函数，添加内部类迭代器" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/arrayListIterator.h" />
@@ -403,39 +461,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Chap5_LinearList/test_arrayList.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chap5_LinearList/vectorList.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding>
+            <element signature="e#99#122#0" expanded="true" />
+            <element signature="e#182#191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Chap5_LinearList/arrayList.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="467" lean-forward="true" selection-start-line="467" selection-end-line="467" />
-          <folding>
-            <element signature="e#97#116#0" expanded="true" />
-            <element signature="e#7659#7668#0" expanded="true" />
-            <element signature="e#8083#8092#0" expanded="true" />
-            <element signature="e#8248#8257#0" expanded="true" />
-            <element signature="e#8256#8265#0" expanded="true" />
-            <element signature="e#8738#8747#0" expanded="true" />
-            <element signature="e#9067#9076#0" expanded="true" />
-            <element signature="e#9341#9350#0" expanded="true" />
-            <element signature="e#9826#9835#0" expanded="true" />
-            <element signature="e#9987#9996#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="160">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Chap5_LinearList/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_LinearList/test_arrayList.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
