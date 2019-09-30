@@ -108,48 +108,36 @@ public:
 
         // 迭代器的值增加
         iterator& operator++() {++position; return *this;}  // 前置
-        iterator operator++(int){
-            // 后置
+        iterator operator++(int){ // 后置
             iterator old = *this;
             ++position;
             return old;
         }
-
-        iterator operator+(const difference_type& n){
+        iterator operator+(int n){
             // +运算符, 实现随机访问
             iterator old = *this;
             old.position += n;
             return old;
         }
-        iterator operator+=(const difference_type& n){
-            position += n;
-            return *this;
-        }
+        iterator& operator+=(int n){position += n; return *this;}
 
         // 迭代器减少
         iterator& operator--() {--position; return *this;}  // 前置
-        iterator operator--(int){
-            // 后置
+        iterator operator--(int){ // 后置
             iterator old = *this;
             --position;
             return old;
         }
-
-        iterator operator-(const difference_type & n){
+        iterator operator-(int n){
             // -运算符，实现随机访问
             iterator old = *this;
             old.position -= n;
             return old;
         }
-        iterator operator-=(const difference_type& n){
-            position -= n;
-            return *this;
-        }
+        iterator& operator-=(int n){position -= n; return *this;}
 
         // 计算指针之间距离的差值
-        difference_type operator-(const iterator& theIterator) const{
-            return position - theIterator.position;
-        }
+        difference_type operator-(const iterator& theIterator) const{ return position - theIterator.position;}
 
         //测试是否相等
         bool operator!=(const iterator right) const {return position != right.position;}

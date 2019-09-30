@@ -78,7 +78,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chap5_LinearList/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Chap5_LinearList/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chap5_LinearList/arrayList.h" beforeDir="false" afterPath="$PROJECT_DIR$/Chap5_LinearList/arrayList.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chap5_LinearList/test_arrayList.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Chap5_LinearList/test_arrayList.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/Chap5_LinearList/CMakeFiles/" />
@@ -94,33 +93,20 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Chap5_LinearList/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            <state>
+              <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Chap5_LinearList/arrayList.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Chap5_LinearList/vectorList.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-              <folding>
-                <element signature="e#99#122#0" expanded="true" />
-                <element signature="e#182#191#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="489">
+              <caret line="119" column="23" lean-forward="true" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -173,8 +159,8 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Chap5_LinearList/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Chap5_LinearList/test_arrayList.cpp" />
-        <option value="$PROJECT_DIR$/Chap5_LinearList/arrayList.h" />
         <option value="$PROJECT_DIR$/Chap5_LinearList/vectorList.h" />
+        <option value="$PROJECT_DIR$/Chap5_LinearList/arrayList.h" />
       </list>
     </option>
   </component>
@@ -303,7 +289,8 @@
       <workItem from="1569719465135" duration="2398000" />
       <workItem from="1569810709723" duration="630000" />
       <workItem from="1569812555581" duration="1256000" />
-      <workItem from="1569823042686" duration="15205000" />
+      <workItem from="1569823042686" duration="15784000" />
+      <workItem from="1569846963674" duration="600000" />
     </task>
     <task id="LOCAL-00001" summary="完成书上的案例代码">
       <created>1568013042696</created>
@@ -354,17 +341,24 @@
       <option name="project" value="LOCAL" />
       <updated>1569829081570</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="增加了对随机访问迭代器的实现">
+      <created>1569840089470</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569840089470</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74042000" />
+    <option name="totallyTimeSpent" value="75221000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="958" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14713065" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14896215" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -419,7 +413,8 @@
     <MESSAGE value="修改setSize里没有考虑到容量的大小的错误，增加reserve和swap方法" />
     <MESSAGE value="修改工程里的文件目录" />
     <MESSAGE value="将重载的关系运算符修改为非成员函数，添加内部类迭代器" />
-    <option name="LAST_COMMIT_MESSAGE" value="将重载的关系运算符修改为非成员函数，添加内部类迭代器" />
+    <MESSAGE value="增加了对随机访问迭代器的实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了对随机访问迭代器的实现" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/arrayListIterator.h" />
@@ -471,10 +466,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Chap5_LinearList/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Chap5_LinearList/vectorList.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="20">
+          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
             <element signature="e#99#122#0" expanded="true" />
             <element signature="e#182#191#0" expanded="true" />
@@ -484,15 +486,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Chap5_LinearList/arrayList.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_LinearList/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        <state relative-caret-position="489">
+          <caret line="119" column="23" lean-forward="true" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
         </state>
       </provider>
     </entry>
