@@ -65,6 +65,15 @@ public:
     //清空数组
     void clear();
 
+    // 判断两个数组是否相等
+    bool isEqual(const arrayList<T>& theList) const;
+
+    //判断当前数组是否小于theList数组
+    bool isLess(const arrayList<T>& theList) const;
+
+    // 判断当前数组是否大于theList数组
+    bool isBig(const arrayList<T>& theList) const;
+
     //重载[]运算符
     T& operator[](int theIndex) {
         //返回数组在索引theIndex上的引用
@@ -74,77 +83,6 @@ public:
         return element[theIndex];
     }
 
-    //重载==运算符
-    bool operator==(const arrayList<T>& theList) const {
-        //返回是否和theList相等
-        //数组长度相同，且每个元素都相等
-        if(listSize != theList.listSize)
-            return false;
-        int i = 0, j = 0;
-        while(i < listSize && j < theList.listSize){
-            if(element[i] != theList.element[j])
-                return false;
-            ++i;++j;
-        }
-        return true;
-    }
-
-    //重载!=运算符
-    bool operator!=(const arrayList<T>& theList) const {
-        if(listSize != theList.listSize)
-            return true;
-        int i = 0, j = 0;
-        while(i < listSize && j < theList.listSize){
-            if(element[i] == theList.element[j]) {
-                ++i;
-                ++j;
-            } else
-                return false;
-        }
-        if(i == listSize && i == theList.listSize)
-            return false;
-        else
-            return true;
-    }
-
-    //重载<
-    bool operator<(const arrayList<T>& theList) const {
-        //字典序的小于
-        int i = 0, j = 0;
-        while(i < listSize && j < theList.listSize){
-            if(element[i] == theList.element[j]){
-                ++i;
-                ++j;
-            }else if(element[i] < theList.element[j]){
-                return true;
-            }else
-                return false;
-        }
-        if(i < j)
-            return true;
-        else
-            return false;
-    }
-
-    //重载>运算符
-    bool operator>(const arrayList<T>& theList) const {
-        //字典序的小于
-        int i = 0, j = 0;
-        while(i < listSize && j < theList.listSize){
-            if(element[i] == theList.element[j]){
-                ++i;
-                ++j;
-            }else if(element[i] > theList.element[j]){
-                return true;
-            }else
-                return false;
-        }
-        if(i > j)
-            return true;
-        else
-            return false;
-    }
-
 protected:
     //若索引theIndex无效，则抛出异常
     void checkIndex(int theIndex) const;
@@ -152,6 +90,52 @@ protected:
     T* element; //存储线性表元素的一维数组
     int arrayLength;  //一维数组的容量
     int listSize;  //线性表的元素个数
+
+    // 内部类, 迭代器
+    class iterator{
+    public:
+        typedef bidirectional_iterator_tag iterator_category;  // 双向迭代器
+        typedef T value_type;  //迭代器指向的数据类型
+        typedef ptrdiff_t difference_type; // 标准库里一种与机器相关的数据类型，常用来表示两个指针相减的结果
+        typedef T* pointer;  //指针
+        typedef T& reference;  //引用
+
+        // 构造函数
+        iterator(T* thePosition = 0) {position = thePosition;}
+
+        // 解引用操作符，只是调用成员，不会改变值，所以是 const
+        T& operator*() const {return *position;}
+        T* operator->() const {return &*position;}
+
+        // 迭代器的值增加
+        iterator& operator++() {++position; return *this;}  // 前置
+        iterator operator++(int){
+            // 后置
+            iterator old = *this;
+            ++position;
+            return old;
+        }
+
+        // 迭代器减少
+        iterator& operator--() {--position; return *this;}  // 前置
+        iterator operator--(int){
+            // 后置
+            iterator old = *this;
+            --position;
+            return old;
+        }
+
+        //测试是否相等
+        bool operator!=(const iterator right) const {return position != right.position;}
+        bool operator==(const iterator right) const {return position == right.position;}
+    protected:
+        T* position;  //指向表元素的指针
+    };
+
+public:
+    // 返回首元素和尾元素下一个位置的迭代器
+    iterator begin() {return iterator(element);}
+    iterator end() {return iterator(element + listSize);}
 };
 
 template <class T>
@@ -389,5 +373,103 @@ void arrayList<T>::clear() {
         element[--listSize].~T();
 }
 
+// 判断是否相等
+template <class T>
+bool arrayList<T>::isEqual(const arrayList<T> &theList) const{
+    //返回是否和theList相等
+    //数组长度相同，且每个元素都相等
+    if(this == &theList)
+        return true;
+    if(listSize != theList.listSize)
+        return false;
+    int i = 0, j = 0;
+    while(i < listSize && j < theList.listSize){
+        if(element[i] != theList.element[j])
+            return false;
+        ++i;
+        ++j;
+    }
+    return true;
+}
+
+// 重载==运算符
+template <class T>
+bool operator==(const arrayList<T>& theLeftList, const arrayList<T>& theRightList){
+    return theLeftList.isEqual(theRightList);
+}
+
+// 重载 != 运算符
+template <class T>
+bool operator!=(const arrayList<T>& theLeftList, const arrayList<T>& theRightList){
+    return !theLeftList.isEqual(theRightList);
+}
+
+// 判断当前数组是否小于theList
+template <class T>
+bool arrayList<T>::isLess(const arrayList<T> &theList) const{
+    if(this == &theList)
+        return false;
+    //字典序的小于
+    int i = 0, j = 0;
+    while(i < listSize && j < theList.listSize){
+        if(element[i] == theList.element[j]){
+            ++i;
+            ++j;
+        }else if(element[i] < theList.element[j]){
+            return true;
+        }else
+            return false;
+    }
+    if(i < j)
+        return true;
+    else
+        return false;
+}
+
+// 重载<运算符
+template <class T>
+bool operator<(const arrayList<T>& theLeftList, const arrayList<T>& theRightList){
+    return theLeftList.isLess(theRightList);
+}
+
+// 重载 >= 运算符
+template <class T>
+bool operator>=(const arrayList<T>& theLeftList, const arrayList<T>& theRightList){
+    return !theLeftList.isLess(theRightList);
+}
+
+// 判断当前数组是否大于theList数组
+template <class T>
+bool arrayList<T>::isBig(const arrayList<T> &theList) const{
+    if(this == &theList)
+        return false;
+    //字典序的小于
+    int i = 0, j = 0;
+    while(i < listSize && j < theList.listSize){
+        if(element[i] == theList.element[j]){
+            ++i;
+            ++j;
+        }else if(element[i] > theList.element[j]){
+            return true;
+        }else
+            return false;
+    }
+    if(i > j)
+        return true;
+    else
+        return false;
+}
+
+// 重载 > 运算符
+template <class T>
+bool operator>(const arrayList<T>& theLeftList, const arrayList<T>& theRightList){
+    return theLeftList.isBig(theRightList);
+}
+
+//重载 <= 运算符
+template <class T>
+bool operator<=(const arrayList<T>& theLeftList, const arrayList<T>& theRightList){
+    return !theLeftList.isBig(theRightList);
+}
 
 #endif //DSACPP_ARRAYLIST_H
