@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "arrayList.h"
 int main() {
     arrayList<int> nums1(10);
@@ -7,19 +8,19 @@ int main() {
         nums1.insert(i, i + 1);
         nums2.insert(i, i + 1);
     }
-    cout << nums1.get(3) << endl;
-    cout << nums1 << endl;
+    cout << "nums1.get(3): " << nums1.get(3) << endl;
+    cout << "nums1: " << nums1 << endl;
     //nums1[5] = 0;
-    cout << nums1[5] << endl;
-    cout << (nums1 == nums2) << endl;
-    cout << (nums1 != nums2) << endl;
-    cout << (nums1 < nums2) << endl;
+    cout << "nums1[5]: " << nums1[5] << endl;
+    cout << "nums1 == nums2: " << (nums1 == nums2) << endl;
+    cout << "nums1 != nums2: " << (nums1 != nums2) << endl;
+    cout << "nums1 < nums2: " << (nums1 < nums2) << endl;
     nums1.pop_back();
-    cout << nums1 << endl;
-    cout << (nums1 != nums2) << endl;
+    cout << "执行nums1.pop_back()之后的结果: " << nums1 << endl;
+    cout << "nums1 != nums2: " << (nums1 != nums2) << endl;
     nums1.push_back(11);
-    cout << nums1 << endl;
-    cout << (nums1 > nums2) << endl;
+    cout << "执行nums1.push_back(11)之后的结果: " << nums1 << endl;
+    cout << "nums1 > nums2: " << (nums1 > nums2) << endl;
 
     nums1.setSize(20);
     cout << "size:" << nums1.size() << endl;
@@ -32,9 +33,15 @@ int main() {
     nums2.reverse();
     cout << nums2 << endl;
 
+    sort(nums2.begin(), nums2.end());
+    cout << nums2 << endl;
+
+    reverse(nums2.begin(), nums2.end());
+    cout << nums2 << endl;
+
     nums1.swap(nums2);
     cout << nums1 << endl << nums2 << endl;
-
+    nums1.clear();
     nums2.clear();
 
     return 0;
