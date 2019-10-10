@@ -9,7 +9,7 @@
 #include <sstream>
 #include "linearList.h"
 #include "changeLength1D.h"
-#include "MyExceptions.h"
+#include "../MyExceptions.h"
 
 using namespace std;
 

@@ -8,7 +8,7 @@
 #include "linearList.h"
 #include <vector>
 #include <sstream>
-#include "MyExceptions.h"
+#include "../MyExceptions.h"
 
 /**
  * 利用vector实现的基于数组的线性表

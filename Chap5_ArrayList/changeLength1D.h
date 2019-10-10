@@ -5,7 +5,7 @@
 #ifndef DSACPP_CHANGELENGTH1D_H
 #define DSACPP_CHANGELENGTH1D_H
 
-#include "MyExceptions.h"
+#include "../MyExceptions.h"
 
 template <class T>
 void changeLength1D(T*& a, int oldLength, int newLength){
