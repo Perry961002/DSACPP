@@ -2,8 +2,9 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="DSACPP" targetName="vectorList" />
       <config projectName="DSACPP" targetName="arrayList" />
+      <config projectName="DSACPP" targetName="chain" />
+      <config projectName="DSACPP" targetName="vectorList" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -12,72 +13,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6fe4dbf-f37f-49fb-95f5-05293a281ef0" name="Default Changelist" comment="修改工程里的文件目录">
-      <change afterPath="$PROJECT_DIR$/Chap5_LinearList/test_vectorList.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chap5_LinearList/vectorList.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.3/CMakeCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.3/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.3/CMakeSystem.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.3/CompilerIdC/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.3/CompilerIdCXX/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSACPP.dir/CXX.includecache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSACPP.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSACPP.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSACPP.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSACPP.dir/depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSACPP.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSACPP.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSACPP.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSACPP.dir/main.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DSACPP.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/Chap5.dir/CXX.includecache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/Chap5.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/Chap5.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/Chap5.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/Chap5.dir/depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/Chap5.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/Chap5.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/Chap5.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/Chap5.dir/main.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/Chap5.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/arrayList.dir/CXX.includecache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/arrayList.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/arrayList.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/arrayList.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/arrayList.dir/depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/arrayList.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/arrayList.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/arrayList.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/arrayList.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/CMakeFiles/progress.marks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/Chap5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/arrayList" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Chap5_LinearList/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/DSACPP" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/DSACPP.cbp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+    <list default="true" id="d6fe4dbf-f37f-49fb-95f5-05293a281ef0" name="Default Changelist" comment="修改文件夹名称">
+      <change afterPath="$PROJECT_DIR$/Chap6_LinkedList/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chap6_LinkedList/chainNode.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chap6_LinkedList/test_chain.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chap5_LinearList/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Chap5_LinearList/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chap5_ArrayList/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Chap5_ArrayList/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chap5_ArrayList/MyExceptions.h" beforeDir="false" afterPath="$PROJECT_DIR$/MyExceptions.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chap5_ArrayList/arrayList.h" beforeDir="false" afterPath="$PROJECT_DIR$/Chap5_ArrayList/arrayList.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chap5_ArrayList/changeLength1D.h" beforeDir="false" afterPath="$PROJECT_DIR$/Chap5_ArrayList/changeLength1D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chap5_ArrayList/vectorList.h" beforeDir="false" afterPath="$PROJECT_DIR$/Chap5_ArrayList/vectorList.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/Chap5_LinearList/CMakeFiles/" />
@@ -93,35 +39,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Chap5_LinearList/vectorList.h">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/chainNode.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="57">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
-                <element signature="e#99#122#0" expanded="true" />
-                <element signature="e#2195#2204#0" expanded="true" />
-                <element signature="e#2819#2828#0" expanded="true" />
-                <element signature="e#3197#3206#0" expanded="true" />
+                <element signature="e#106#115#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Chap5_LinearList/CMakeLists.txt">
+        <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/test_chain.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Chap5_LinearList/test_vectorList.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+            <state relative-caret-position="40">
+              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
               <folding>
                 <element signature="e#42#61#0" expanded="true" />
               </folding>
@@ -129,23 +63,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Chap5_LinearList/test_arrayList.cpp">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/chain.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="160">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Chap5_LinearList/arrayList.h">
+        <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1081">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="80">
+              <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/arrayList.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+              <folding>
+                <element signature="e#97#116#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -175,16 +118,44 @@
     <favorite-branches>
       <branch-storage>
         <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="Chap6" />
+              </list>
+            </value>
+          </entry>
           <entry type="REMOTE">
             <value>
               <list>
                 <branch-info repo="$PROJECT_DIR$" source="origin/Chap5" />
+                <branch-info repo="$PROJECT_DIR$" source="origin/Chap6" />
               </list>
             </value>
           </entry>
         </map>
       </branch-storage>
     </favorite-branches>
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -195,12 +166,18 @@
         <option value="$PROJECT_DIR$/arrayListIterator.h" />
         <option value="$PROJECT_DIR$/arrayList.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Chap5_LinearList/test_arrayList.cpp" />
         <option value="$PROJECT_DIR$/Chap5_LinearList/arrayList.h" />
         <option value="$PROJECT_DIR$/Chap5_LinearList/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Chap5_LinearList/test_vectorList.cpp" />
         <option value="$PROJECT_DIR$/Chap5_LinearList/vectorList.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Chap6_LinkedList/chainNode.h" />
+        <option value="$PROJECT_DIR$/Chap5_ArrayList/vectorList.h" />
+        <option value="$PROJECT_DIR$/Chap6_LinkedList/chain.cpp" />
+        <option value="$PROJECT_DIR$/Chap6_LinkedList/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Chap6_LinkedList/test_chain.cpp" />
+        <option value="$PROJECT_DIR$/Chap6_LinkedList/chain.h" />
       </list>
     </option>
   </component>
@@ -215,6 +192,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="DSACPP" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/DSACPP" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -225,24 +213,25 @@
             <path>
               <item name="DSACPP" type="b2602c69:ProjectViewProjectNode" />
               <item name="DSACPP" type="462c0819:PsiDirectoryNode" />
-              <item name="Chap5_LinearList" type="462c0819:PsiDirectoryNode" />
+              <item name="Chap6_LinkedList" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Chap5_LinearList" />
     </key>
   </component>
@@ -258,8 +247,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.vectorList">
+  <component name="RunManager" selected="CMake Application.chain">
     <configuration name="arrayList" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DSACPP" TARGET_NAME="arrayList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DSACPP" RUN_TARGET_NAME="arrayList">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="chain" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DSACPP" TARGET_NAME="chain" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DSACPP" RUN_TARGET_NAME="chain">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -272,10 +266,11 @@
     <list>
       <item itemvalue="CMake Application.arrayList" />
       <item itemvalue="CMake Application.vectorList" />
+      <item itemvalue="CMake Application.chain" />
     </list>
   </component>
   <component name="SvnConfiguration">
-    <configuration>$USER_HOME$/.subversion</configuration>
+    <configuration>$PROJECT_DIR$/../.subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -342,6 +337,9 @@
       <workItem from="1570585001637" duration="9212000" />
       <workItem from="1570669960582" duration="2918000" />
       <workItem from="1570672977374" duration="2227000" />
+      <workItem from="1570694475204" duration="9762000" />
+      <workItem from="1570719051439" duration="2824000" />
+      <workItem from="1570724323579" duration="323000" />
     </task>
     <task id="LOCAL-00001" summary="完成书上的案例代码">
       <created>1568013042696</created>
@@ -406,32 +404,40 @@
       <option name="project" value="LOCAL" />
       <updated>1569847615489</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="修改文件夹名称">
+      <created>1570694703258</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1570694703258</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94923000" />
+    <option name="totallyTimeSpent" value="107832000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="953" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12271062" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12637363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43205574" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43023255" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.3244186" />
+      <window_info anchor="bottom" id="Messages" order="8" visible="true" weight="0.32171893" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3287037" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3298611" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32868758" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.3263647" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.3255814" />
+      <window_info anchor="bottom" id="Statistic" order="13" weight="0.329849" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -513,7 +519,8 @@
     <MESSAGE value="将重载的关系运算符修改为非成员函数，添加内部类迭代器" />
     <MESSAGE value="增加了对随机访问迭代器的实现" />
     <MESSAGE value="修改了+=，-=运算符的返回值类型" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了+=，-=运算符的返回值类型" />
+    <MESSAGE value="修改文件夹名称" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改文件夹名称" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/arrayListIterator.h" />
@@ -521,14 +528,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Chap5_LinearList/Makefile" />
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_LinearList/MyExceptions.h">
+    <entry file="file://$PROJECT_DIR$/MyExceptions.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
@@ -538,7 +538,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_LinearList/changeLength1D.h">
+    <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/changeLength1D.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
@@ -548,31 +548,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_LinearList/linearList.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_LinearList/test_arrayList.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_LinearList/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_LinearList/test_vectorList.cpp">
+    <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/test_vectorList.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
@@ -582,23 +558,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_LinearList/arrayList.h">
+    <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/test_arrayList.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1081">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="80">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_LinearList/vectorList.h">
+    <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="60">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/linearList.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/vectorList.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/test_chain.h" />
+    <entry file="file://$PROJECT_DIR$/.idea/statistic.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10708">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/DSACPP.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/chainNode.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
-            <element signature="e#99#122#0" expanded="true" />
-            <element signature="e#2195#2204#0" expanded="true" />
-            <element signature="e#2819#2828#0" expanded="true" />
-            <element signature="e#3197#3206#0" expanded="true" />
+            <element signature="e#106#115#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/arrayList.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding>
+            <element signature="e#97#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/test_chain.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding>
+            <element signature="e#42#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/chain.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
