@@ -3,4 +3,4 @@ project(DSACPP)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_subdirectory(Chap5_LinearList)
+add_subdirectory(Chap5_ArrayList)
