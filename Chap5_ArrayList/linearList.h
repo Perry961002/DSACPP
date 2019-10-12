@@ -6,7 +6,6 @@
 #define DSACPP_LINEARLIST_H
 
 #include <iostream>
-using namespace std;
 
 //一个线性表的抽象类
 template <class T>
@@ -33,7 +32,7 @@ public:
     virtual void insert(int theIndex, const T& theElement) = 0;
 
     //把线性表插入输出流out
-    virtual void output(ostream& out) const = 0;
+    virtual void output(std::ostream& out) const = 0;
 };
 
 #endif //DSACPP_LINEARLIST_H

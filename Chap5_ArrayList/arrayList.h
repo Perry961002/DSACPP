@@ -11,8 +11,6 @@
 #include "changeLength1D.h"
 #include "../MyExceptions.h"
 
-using namespace std;
-
 template <class T>
 class arrayList : public linearList<T>{
 public:

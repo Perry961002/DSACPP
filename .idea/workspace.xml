@@ -13,10 +13,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6fe4dbf-f37f-49fb-95f5-05293a281ef0" name="Default Changelist" comment="">
+    <list default="true" id="d6fe4dbf-f37f-49fb-95f5-05293a281ef0" name="Default Changelist" comment="增加两张图片">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chap6_LinkedList/chain.h" beforeDir="false" afterPath="$PROJECT_DIR$/Chap6_LinkedList/chain.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chap5_ArrayList/arrayList.h" beforeDir="false" afterPath="$PROJECT_DIR$/Chap5_ArrayList/arrayList.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chap5_ArrayList/linearList.h" beforeDir="false" afterPath="$PROJECT_DIR$/Chap5_ArrayList/linearList.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/dsa_a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/dsa_a.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/dsa_b.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/dsa_b.jpg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/Chap5_LinearList/CMakeFiles/" />
@@ -32,11 +34,35 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/chainNode.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="160">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <folding>
+                <element signature="e#106#115#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/chain.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="215" column="36" lean-forward="true" selection-start-line="215" selection-start-column="36" selection-end-line="215" selection-end-column="36" />
+              <folding>
+                <element signature="e#89#108#0" expanded="true" />
+                <element signature="e#2348#2357#0" expanded="true" />
+                <element signature="e#3012#3021#0" expanded="true" />
+                <element signature="e#3237#3246#0" expanded="true" />
+                <element signature="e#3549#3558#0" expanded="true" />
+                <element signature="e#3860#3869#0" expanded="true" />
+                <element signature="e#4308#4317#0" expanded="true" />
+                <element signature="e#4885#4894#0" expanded="true" />
+                <element signature="e#5522#5531#0" expanded="true" />
+                <element signature="e#5740#5749#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,8 +156,9 @@
         <option value="$PROJECT_DIR$/Chap6_LinkedList/test_chain.cpp" />
         <option value="$PROJECT_DIR$/Chap6_LinkedList/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Chap6_LinkedList/chain.h" />
-        <option value="$PROJECT_DIR$/Chap5_ArrayList/linearList.h" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Chap5_ArrayList/arrayList.h" />
+        <option value="$PROJECT_DIR$/Chap5_ArrayList/linearList.h" />
       </list>
     </option>
   </component>
@@ -163,6 +190,11 @@
             <path>
               <item name="DSACPP" type="b2602c69:ProjectViewProjectNode" />
               <item name="DSACPP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DSACPP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DSACPP" type="462c0819:PsiDirectoryNode" />
+              <item name="Chap6_LinkedList" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -196,26 +228,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.arrayList">
-    <configuration name="arrayList" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DSACPP" TARGET_NAME="arrayList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DSACPP" RUN_TARGET_NAME="arrayList">
+  <component name="RunManager" selected="CMake Application.Chap6_chain">
+    <configuration name="Chap5_arrayList" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DSACPP" TARGET_NAME="Chap5_arrayList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DSACPP" RUN_TARGET_NAME="Chap5_arrayList">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="chain" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DSACPP" TARGET_NAME="chain" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DSACPP" RUN_TARGET_NAME="chain">
+    <configuration name="Chap5_vectorList" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DSACPP" TARGET_NAME="Chap5_vectorList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DSACPP" RUN_TARGET_NAME="Chap5_vectorList">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="vectorList" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DSACPP" TARGET_NAME="vectorList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DSACPP" RUN_TARGET_NAME="vectorList">
+    <configuration name="Chap6_chain" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DSACPP" TARGET_NAME="Chap6_chain" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DSACPP" RUN_TARGET_NAME="Chap6_chain">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake Application.arrayList" />
-      <item itemvalue="CMake Application.chain" />
-      <item itemvalue="CMake Application.vectorList" />
+      <item itemvalue="CMake Application.Chap5_arrayList" />
+      <item itemvalue="CMake Application.Chap5_vectorList" />
+      <item itemvalue="CMake Application.Chap6_chain" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -297,6 +329,11 @@
       <workItem from="1570856526292" duration="158000" />
       <workItem from="1570856958868" duration="186000" />
       <workItem from="1570857454153" duration="68000" />
+      <workItem from="1570857533728" duration="519000" />
+      <workItem from="1570859198237" duration="16000" />
+      <workItem from="1570859249382" duration="19000" />
+      <workItem from="1570864482232" duration="297000" />
+      <workItem from="1570867219695" duration="614000" />
     </task>
     <task id="LOCAL-00001" summary="完成书上的案例代码">
       <created>1568013042696</created>
@@ -375,30 +412,45 @@
       <option name="project" value="LOCAL" />
       <updated>1570724780977</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="修改chain.h里的类名，增加两张图片">
+      <created>1570857668964</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1570857668964</updated>
+    </task>
+    <task id="LOCAL-00013" summary="增加两张图片">
+      <created>1570857818482</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1570857818482</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118674000" />
+    <option name="totallyTimeSpent" value="120139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="957" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12942614" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13553114" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.1627907" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.16203703" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32093024" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32060185" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32868758" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3298611" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32868758" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32716763" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.3255814" />
       <window_info anchor="bottom" id="Statistic" order="13" weight="0.32868758" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -484,7 +536,9 @@
     <MESSAGE value="修改了+=，-=运算符的返回值类型" />
     <MESSAGE value="修改文件夹名称" />
     <MESSAGE value="添加第6章的代码，还不包括习题的代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加第6章的代码，还不包括习题的代码" />
+    <MESSAGE value="修改chain.h里的类名，增加两张图片" />
+    <MESSAGE value="增加两张图片" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加两张图片" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/arrayListIterator.h" />
@@ -632,27 +686,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/linearList.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-142">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="40">
+            <caret line="2" selection-start-line="2" selection-end-line="2" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/vectorList.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#99#122#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/linearList.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/arrayList.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="294" column="18" lean-forward="true" selection-start-line="294" selection-start-column="18" selection-end-line="294" selection-end-column="18" />
+        <state relative-caret-position="306">
+          <caret line="267" column="47" selection-start-line="267" selection-start-column="47" selection-end-line="267" selection-end-column="47" />
           <folding>
             <element signature="e#97#116#0" expanded="true" />
           </folding>
@@ -662,7 +731,7 @@
     <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/chainNode.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding>
             <element signature="e#106#115#0" expanded="true" />
           </folding>
@@ -671,9 +740,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/chain.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="132" column="10" lean-forward="true" selection-start-line="132" selection-start-column="10" selection-end-line="132" selection-end-column="10" />
+        <state relative-caret-position="198">
+          <caret line="215" column="36" lean-forward="true" selection-start-line="215" selection-start-column="36" selection-end-line="215" selection-end-column="36" />
           <folding>
+            <element signature="e#89#108#0" expanded="true" />
             <element signature="e#2348#2357#0" expanded="true" />
             <element signature="e#3012#3021#0" expanded="true" />
             <element signature="e#3237#3246#0" expanded="true" />
@@ -684,13 +754,6 @@
             <element signature="e#5522#5531#0" expanded="true" />
             <element signature="e#5740#5749#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
