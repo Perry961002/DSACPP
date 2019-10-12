@@ -12,12 +12,12 @@
 #include "linearList.h"
 
 template <class T>
-class test_chain : public linearList<T> {
+class chain : public linearList<T> {
 public:
     //构造函数，复制构造函数和析构函数
-    test_chain(int initialCapacity = 10);
-    test_chain(const test_chain<T>&);
-    ~test_chain();
+    chain(int initialCapacity = 10);
+    chain(const chain<T>&);
+    ~chain();
 
     //ADT方法
     bool empty() const {return listSize == 0;}
@@ -84,7 +84,7 @@ protected:
 
 //构造函数
 template <class T>
-test_chain<T>::test_chain(int initialCapacity) {
+chain<T>::chain(int initialCapacity) {
     if(initialCapacity < 1){
         ostringstream s;
         s << "Initial capacity = " << initialCapacity << "Must be > 0";
@@ -96,7 +96,7 @@ test_chain<T>::test_chain(int initialCapacity) {
 
 //复制构造函数
 template <class T>
-test_chain<T>::test_chain(const test_chain<T> &theList) {
+chain<T>::chain(const chain<T> &theList) {
     listSize = theList.listSize;
     if(listSize == 0){
         //链表为空
@@ -120,7 +120,7 @@ test_chain<T>::test_chain(const test_chain<T> &theList) {
 
 //析构函数
 template <class T>
-test_chain<T>::~test_chain() {
+chain<T>::~chain() {
     //删除所有结点
     while(firstNode != NULL){
         //删除首结点
@@ -132,7 +132,7 @@ test_chain<T>::~test_chain() {
 
 //检查索引是否有效
 template <class T>
-void test_chain<T>::checkIndex(int theIndex) const {
+void chain<T>::checkIndex(int theIndex) const {
     //确定索引theIndex在0 和 listSize - 1之间
     if(theIndex < 0 || theIndex >= listSize){
         ostringstream s;
@@ -143,7 +143,7 @@ void test_chain<T>::checkIndex(int theIndex) const {
 
 //返回索引是theIndex的元素
 template <class T>
-T& test_chain<T>::get(int theIndex) const {
+T& chain<T>::get(int theIndex) const {
     //如果元素不存在，则抛出异常
     checkIndex(theIndex);
 
@@ -156,7 +156,7 @@ T& test_chain<T>::get(int theIndex) const {
 
 //返回元素theElement首次出现时的索引
 template <class T>
-int test_chain<T>::indexOf(const T &theElement) const {
+int chain<T>::indexOf(const T &theElement) const {
     //搜索链表寻找元素theElement
     chainNode<T>* currentNode = firstNode;
     int theIndex = 0;  //当前结点的索引
@@ -175,7 +175,7 @@ int test_chain<T>::indexOf(const T &theElement) const {
 
 //删除索引为theIndex的元素
 template <class T>
-void test_chain<T>::erase(int theIndex) {
+void chain<T>::erase(int theIndex) {
     //如果元素不存在，则抛出异常
     checkIndex(theIndex);
 
@@ -199,7 +199,7 @@ void test_chain<T>::erase(int theIndex) {
 
 //在索引为theIndex的位置上插入新元素theElement
 template <class T>
-void test_chain<T>::insert(int theIndex, const T &theElement) {
+void chain<T>::insert(int theIndex, const T &theElement) {
     //先检查索引是否有效
     if(theIndex < 0 || theIndex > listSize){
         //无效索引
@@ -225,14 +225,14 @@ void test_chain<T>::insert(int theIndex, const T &theElement) {
 
 //把元素插入到一个输出流
 template <class T>
-void test_chain<T>::output(ostream &out) const {
+void chain<T>::output(ostream &out) const {
     for(chainNode<T>* currentNode = firstNode; currentNode != NULL; currentNode = currentNode->next)
         out << currentNode->element << " ";
 }
 
 //重载<<
 template <class T>
-ostream& operator<<(ostream& out, const test_chain<T>& x){
+ostream& operator<<(ostream& out, const chain<T>& x){
     x.output(out);
     return out;
 }
