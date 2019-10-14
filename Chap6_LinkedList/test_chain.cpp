@@ -26,5 +26,8 @@ int main(){
 
     numChain1.swap(numChain2);
     cout << "numChain1: " << numChain1 << endl << "numChain2: " << numChain2 << endl;
+
+    numChain1.reverse();
+    cout << "numChain1.reverse(): " << numChain1 << endl;
     return 0;
 }

@@ -430,7 +430,18 @@ void chain<T>::swap(chain<T> &theChain) {
 //翻转链表
 template <class T>
 void chain<T>::reverse() {
+    //最多只有一个结点的情况下不变
+    if(listSize < 2) return;
 
+    chainNode<T>* currentNode = firstNode->next;
+    firstNode->next = NULL;
+    //迭代
+    while(currentNode != NULL){
+        chainNode<T>* nextNode = currentNode->next;
+        currentNode->next = firstNode;
+        firstNode = currentNode;
+        currentNode = nextNode;
+    }
 }
 
 //清表

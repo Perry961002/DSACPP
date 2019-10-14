@@ -2,9 +2,10 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
+      <config projectName="DSACPP" targetName="Chap5_arrayList" />
       <config projectName="DSACPP" targetName="Chap6_chain" />
       <config projectName="DSACPP" targetName="Chap5_vectorList" />
-      <config projectName="DSACPP" targetName="Chap5_arrayList" />
+      <config projectName="DSACPP" targetName="Chap6_extendedChain" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -13,10 +14,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6fe4dbf-f37f-49fb-95f5-05293a281ef0" name="Default Changelist" comment="">
+    <list default="true" id="d6fe4dbf-f37f-49fb-95f5-05293a281ef0" name="Default Changelist" comment="去除h里面的namespace语句，修改camke里面的生成目标文件名称">
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chap6_LinkedList/extendedChain.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chap6_LinkedList/extendedLinearList.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chap6_LinkedList/test_extendedChain.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chap5_ArrayList/arrayList.h" beforeDir="false" afterPath="$PROJECT_DIR$/Chap5_ArrayList/arrayList.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chap6_LinkedList/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Chap6_LinkedList/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chap6_LinkedList/chain.h" beforeDir="false" afterPath="$PROJECT_DIR$/Chap6_LinkedList/chain.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chap6_LinkedList/test_chain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Chap6_LinkedList/test_chain.cpp" afterDir="false" />
     </list>
@@ -118,7 +122,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.Chap6_chain">
+  <component name="RunManager" selected="CMake Application.Chap6_extendedChain">
     <configuration name="Chap5_arrayList" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DSACPP" TARGET_NAME="Chap5_arrayList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DSACPP" RUN_TARGET_NAME="Chap5_arrayList">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -134,10 +138,16 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Chap6_extendedChain" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DSACPP" TARGET_NAME="Chap6_extendedChain" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DSACPP" RUN_TARGET_NAME="Chap6_extendedChain">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="CMake Application.Chap5_arrayList" />
       <item itemvalue="CMake Application.Chap5_vectorList" />
       <item itemvalue="CMake Application.Chap6_chain" />
+      <item itemvalue="CMake Application.Chap6_extendedChain" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -245,7 +255,11 @@
       <workItem from="1571038293175" duration="73000" />
       <workItem from="1571038680857" duration="329000" />
       <workItem from="1571043506142" duration="187000" />
-      <workItem from="1571043710582" duration="4517000" />
+      <workItem from="1571043710582" duration="4847000" />
+      <workItem from="1571048806216" duration="111000" />
+      <workItem from="1571049150253" duration="28000" />
+      <workItem from="1571050578830" duration="245000" />
+      <workItem from="1571062070120" duration="1351000" />
     </task>
     <task id="LOCAL-00001" summary="完成书上的案例代码">
       <created>1568013042696</created>
@@ -345,7 +359,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570877098155</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="chain类的一部分习题解答">
+      <created>1571048542405</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1571048542405</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +414,8 @@
     <MESSAGE value="修改chain.h里的类名，增加两张图片" />
     <MESSAGE value="增加两张图片" />
     <MESSAGE value="去除h里面的namespace语句，修改camke里面的生成目标文件名称" />
-    <option name="LAST_COMMIT_MESSAGE" value="去除h里面的namespace语句，修改camke里面的生成目标文件名称" />
+    <MESSAGE value="chain类的一部分习题解答" />
+    <option name="LAST_COMMIT_MESSAGE" value="chain类的一部分习题解答" />
   </component>
   <component name="masterDetails">
     <states>
