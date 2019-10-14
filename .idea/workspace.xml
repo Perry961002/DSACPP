@@ -2,9 +2,9 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="DSACPP" targetName="arrayList" />
-      <config projectName="DSACPP" targetName="chain" />
-      <config projectName="DSACPP" targetName="vectorList" />
+      <config projectName="DSACPP" targetName="Chap6_chain" />
+      <config projectName="DSACPP" targetName="Chap5_vectorList" />
+      <config projectName="DSACPP" targetName="Chap5_arrayList" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -13,15 +13,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6fe4dbf-f37f-49fb-95f5-05293a281ef0" name="Default Changelist" comment="增加两张图片">
+    <list default="true" id="d6fe4dbf-f37f-49fb-95f5-05293a281ef0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chap5_ArrayList/arrayList.h" beforeDir="false" afterPath="$PROJECT_DIR$/Chap5_ArrayList/arrayList.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chap5_ArrayList/linearList.h" beforeDir="false" afterPath="$PROJECT_DIR$/Chap5_ArrayList/linearList.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/dsa_a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/dsa_a.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/dsa_b.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/dsa_b.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chap6_LinkedList/chain.h" beforeDir="false" afterPath="$PROJECT_DIR$/Chap6_LinkedList/chain.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chap6_LinkedList/test_chain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Chap6_LinkedList/test_chain.cpp" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
-    <ignored path="$PROJECT_DIR$/Chap5_LinearList/CMakeFiles/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,59 +30,12 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/chainNode.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-              <folding>
-                <element signature="e#106#115#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/chain.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="215" column="36" lean-forward="true" selection-start-line="215" selection-start-column="36" selection-end-line="215" selection-end-column="36" />
-              <folding>
-                <element signature="e#89#108#0" expanded="true" />
-                <element signature="e#2348#2357#0" expanded="true" />
-                <element signature="e#3012#3021#0" expanded="true" />
-                <element signature="e#3237#3246#0" expanded="true" />
-                <element signature="e#3549#3558#0" expanded="true" />
-                <element signature="e#3860#3869#0" expanded="true" />
-                <element signature="e#4308#4317#0" expanded="true" />
-                <element signature="e#4885#4894#0" expanded="true" />
-                <element signature="e#5522#5531#0" expanded="true" />
-                <element signature="e#5740#5749#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CMakeLists.txt" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>check</find>
-      <find>int</find>
-      <find>test_chain</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>chain</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -135,79 +86,18 @@
       </branch-storage>
     </excluded-from-favorite>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/MyExceptions.h" />
-        <option value="$PROJECT_DIR$/linearList.h" />
-        <option value="$PROJECT_DIR$/changeLength1D.h" />
-        <option value="$PROJECT_DIR$/arrayListIterator.h" />
-        <option value="$PROJECT_DIR$/arrayList.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/Chap5_LinearList/test_arrayList.cpp" />
-        <option value="$PROJECT_DIR$/Chap5_LinearList/arrayList.h" />
-        <option value="$PROJECT_DIR$/Chap5_LinearList/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/Chap5_LinearList/test_vectorList.cpp" />
-        <option value="$PROJECT_DIR$/Chap5_LinearList/vectorList.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/Chap6_LinkedList/chainNode.h" />
-        <option value="$PROJECT_DIR$/Chap5_ArrayList/vectorList.h" />
-        <option value="$PROJECT_DIR$/Chap6_LinkedList/chain.cpp" />
-        <option value="$PROJECT_DIR$/Chap6_LinkedList/test_chain.cpp" />
-        <option value="$PROJECT_DIR$/Chap6_LinkedList/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/Chap6_LinkedList/chain.h" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/Chap5_ArrayList/arrayList.h" />
-        <option value="$PROJECT_DIR$/Chap5_ArrayList/linearList.h" />
-      </list>
-    </option>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Chap6_LinkedList/chain.h" root0="SKIP_INSPECTION" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="957" />
-  </component>
+  <component name="ProjectId" id="1SBVkTkcqPIXSiLDTjxodJ0vqHJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="DSACPP" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/DSACPP" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="DSACPP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DSACPP" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DSACPP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DSACPP" type="462c0819:PsiDirectoryNode" />
-              <item name="Chap6_LinkedList" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -334,6 +224,28 @@
       <workItem from="1570859249382" duration="19000" />
       <workItem from="1570864482232" duration="297000" />
       <workItem from="1570867219695" duration="614000" />
+      <workItem from="1570876915553" duration="235000" />
+      <workItem from="1570886839710" duration="573000" />
+      <workItem from="1570975940943" duration="5139000" />
+      <workItem from="1570981631909" duration="245000" />
+      <workItem from="1570981982000" duration="69000" />
+      <workItem from="1570982133746" duration="88000" />
+      <workItem from="1571017366952" duration="3999000" />
+      <workItem from="1571021448955" duration="1579000" />
+      <workItem from="1571023180850" duration="60000" />
+      <workItem from="1571032007024" duration="850000" />
+      <workItem from="1571037125622" duration="49000" />
+      <workItem from="1571037218409" duration="63000" />
+      <workItem from="1571037304743" duration="146000" />
+      <workItem from="1571037489803" duration="176000" />
+      <workItem from="1571037679200" duration="137000" />
+      <workItem from="1571037829386" duration="185000" />
+      <workItem from="1571038028265" duration="171000" />
+      <workItem from="1571038216775" duration="38000" />
+      <workItem from="1571038293175" duration="73000" />
+      <workItem from="1571038680857" duration="329000" />
+      <workItem from="1571043506142" duration="187000" />
+      <workItem from="1571043710582" duration="4517000" />
     </task>
     <task id="LOCAL-00001" summary="完成书上的案例代码">
       <created>1568013042696</created>
@@ -426,60 +338,15 @@
       <option name="project" value="LOCAL" />
       <updated>1570857818482</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="去除h里面的namespace语句，修改camke里面的生成目标文件名称">
+      <created>1570877098155</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1570877098155</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120139000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="957" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13553114" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.16203703" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32060185" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32868758" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3298611" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32716763" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.3255814" />
-      <window_info anchor="bottom" id="Statistic" order="13" weight="0.32868758" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14346765" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24305555" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.3275463" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3287037" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3298611" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3290993" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.3290993" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -490,20 +357,7 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -538,225 +392,8 @@
     <MESSAGE value="添加第6章的代码，还不包括习题的代码" />
     <MESSAGE value="修改chain.h里的类名，增加两张图片" />
     <MESSAGE value="增加两张图片" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加两张图片" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/arrayListIterator.h" />
-    <entry file="file://$PROJECT_DIR$/Chap5_LinearList/Makefile" />
-    <entry file="file://$PROJECT_DIR$/MyExceptions.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="e#103#122#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/changeLength1D.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <element signature="e#143#152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/test_vectorList.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-          <folding>
-            <element signature="e#42#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/test_arrayList.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/test_chain.h" />
-    <entry file="file://$PROJECT_DIR$/.idea/statistic.xml" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10708">
-          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/DSACPP.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="uml://JavaScript-modules-diagram//Users/perry/DSACPP">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JavaScript-modules-diagram</ID>
-          <OriginalElement>$PROJECT_DIR$</OriginalElement>
-          <nodes />
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.11587300821927478" x="2089.0" y="1179.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>All</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>Overview</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JavaScript-modules-diagram//Users/perry/DSACPP/Chap6_LinkedList">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JavaScript-modules-diagram</ID>
-          <OriginalElement>$PROJECT_DIR$/Chap6_LinkedList</OriginalElement>
-          <nodes />
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="779.0" y="368.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>All</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>Overview</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JavaScript-modules-diagram//Users/perry/DSACPP/Chap5_ArrayList">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JavaScript-modules-diagram</ID>
-          <OriginalElement>$PROJECT_DIR$/Chap5_ArrayList</OriginalElement>
-          <nodes />
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.6973769619579675" x="865.0" y="491.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>All</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>Overview</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/test_chain.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-          <folding>
-            <element signature="e#42#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="40">
-            <caret line="2" selection-start-line="2" selection-end-line="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/vectorList.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#99#122#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/linearList.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap5_ArrayList/arrayList.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="267" column="47" selection-start-line="267" selection-start-column="47" selection-end-line="267" selection-end-column="47" />
-          <folding>
-            <element signature="e#97#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/chainNode.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="e#106#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chap6_LinkedList/chain.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="215" column="36" lean-forward="true" selection-start-line="215" selection-start-column="36" selection-end-line="215" selection-end-column="36" />
-          <folding>
-            <element signature="e#89#108#0" expanded="true" />
-            <element signature="e#2348#2357#0" expanded="true" />
-            <element signature="e#3012#3021#0" expanded="true" />
-            <element signature="e#3237#3246#0" expanded="true" />
-            <element signature="e#3549#3558#0" expanded="true" />
-            <element signature="e#3860#3869#0" expanded="true" />
-            <element signature="e#4308#4317#0" expanded="true" />
-            <element signature="e#4885#4894#0" expanded="true" />
-            <element signature="e#5522#5531#0" expanded="true" />
-            <element signature="e#5740#5749#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <MESSAGE value="去除h里面的namespace语句，修改camke里面的生成目标文件名称" />
+    <option name="LAST_COMMIT_MESSAGE" value="去除h里面的namespace语句，修改camke里面的生成目标文件名称" />
   </component>
   <component name="masterDetails">
     <states>
