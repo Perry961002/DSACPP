@@ -28,6 +28,34 @@ public:
     void insert(int theIndex, const T& theElement);
     void output(ostream& out) const;
 
+    //习题里的函数
+    //使线性表的大小等于theSize
+    void setSize(int theSize);
+
+    //将索引为theIndex的元素替换为theElement
+    void set(int theIndex, const T& theElement);
+
+    //删除指定范围内的元素
+    void removeRange(int fromIndex, int toIndex);
+
+    //返回元素theElement最后出现的索引
+    int lastIndexOf(const T& theElement) const;
+
+    //是否和线性表theChain相等
+    bool isEqual(const chain<T>& theChain) const;
+
+    //是否小于线性表theChain
+    bool isLess(const chain<T>& theChain) const;
+
+    //交换两个线性表
+    void swap(chain<T>& theChain);
+
+    //翻转xianxingb
+    void reverse();
+
+    //清表
+    void clear();
+
     //重载[]运算符
     T& operator[](int theIndex){
         //如果元素不存在，则抛出异常
@@ -45,6 +73,9 @@ public:
     class iterator{
     public:
         typedef forward_iterator_tag iterator_category;  //向前迭代器
+        typedef T value_type;  //迭代器指向的数据类型
+        typedef T* pointer;  //指针
+        typedef T& reference;  //引用
 
         //构造函数
         iterator(chainNode<T>* theNode = NULL) {node = theNode;}
@@ -236,5 +267,195 @@ ostream& operator<<(ostream& out, const chain<T>& x){
     x.output(out);
     return out;
 }
+
+//使线性表的大小等于theSize
+template <class T>
+void chain<T>::setSize(int theSize) {
+    //如果数组的初始大小小于等于指定的值，则增加NULL元素
+    //如果数组的初始大小大于指定的值，则删除多余元素
+    if(theSize < 0){
+        ostringstream s;
+        s << "Set size = " << theSize << "Must be >= 0";
+        throw illegalParameterValue(s.str());
+    }
+    if(listSize > theSize){
+        //找到索引为theSize的前驱
+        chainNode<T>* p = firstNode;
+        for(int i = 0; i < theSize - 1; ++i)
+            p = p->next;
+        //删除所有结点
+        while(p->next != NULL){
+            chainNode<T>* currentNode = p->next;
+            p->next = currentNode->next;
+            delete currentNode;
+        }
+        listSize = theSize;
+    }
+}
+
+//将索引为theIndex的元素替换为theElement
+template <class T>
+void chain<T>::set(int theIndex, const T &theElement) {
+    //索引theIndex超出异常，则抛出异常
+    checkIndex(theIndex);
+
+    //寻找需要被替换的元素
+    chainNode<T>* currentNode = firstNode;
+    for(int i = 0; i < theIndex; ++i)
+        currentNode = currentNode->next;
+    currentNode->element = theElement;
+}
+
+//删除指定范围的元素
+template <class T>
+void chain<T>::removeRange(int fromIndex, int toIndex) {
+    //确定索引是否有效
+    if(fromIndex < 0 || toIndex >= listSize){
+        //无效的索引
+        ostringstream s;
+        s << "Index  from" << fromIndex << " to " << toIndex << " size = " << listSize;
+        throw illegalParameterValue(s.str());
+    }
+
+    //找到开始删除结点的前驱结点
+    chainNode<T>* p = firstNode;
+    for(int i = 0; i < fromIndex - 1; ++i)
+        p = p->next;
+    int needDeleteNum = (toIndex - fromIndex + 1);
+    while(needDeleteNum > 0){
+        chainNode<T>* currentNode = p->next;
+        p->next = currentNode->next;
+        delete currentNode;
+        --needDeleteNum;
+    }
+    listSize -= (toIndex - fromIndex + 1);
+}
+
+//找到元素最后出现的位置
+template <class T>
+int chain<T>::lastIndexOf(const T &theElement) const{
+    int theLastIndex = -1;
+    chainNode<T>* currentNode = firstNode;
+    for(int i = 0; i < listSize; ++i){
+        if(currentNode->element == theElement)
+            theLastIndex = i;
+        currentNode = currentNode->next;
+    }
+    return theLastIndex;
+}
+
+//判断是否和线性表theChain相等
+template <class T>
+bool chain<T>::isEqual(const chain<T> &theChain) const {
+    //同一个线性表
+    if(this == &theChain)
+        return true;
+
+    //两个线性表的长度不等，肯定不相等
+    if(listSize != theChain.listSize)
+        return false;
+
+    //比较每一个元素
+    chainNode<T> *p = firstNode, *q = theChain.firstNode;
+    while(p != NULL && q != NULL){
+        //遇到不一样的元素就返回false
+        if(p->element != q->element)
+            return false;
+        p = p->next;
+        q = q->next;
+    }
+
+    return true;
+}
+
+//重载==运算符
+template <class T>
+bool operator==(const chain<T>& theLeftChain, const chain<T>& theRightChain){
+    return theLeftChain.isEqual(theRightChain);
+}
+
+//重载!=运算符
+template <class T>
+bool operator!=(const chain<T>& theLeftChain, const chain<T>& theRightChain){
+    return !theLeftChain.isEqual(theRightChain);
+}
+
+//判断是否小于线性表theChain
+template <class T>
+bool chain<T>::isLess(const chain<T> &theChain) const {
+    //是同一个线性表
+    if(this == &theChain)
+        return false;
+
+    //比较每一个元素
+    chainNode<T> *p = firstNode, *q = theChain.firstNode;
+    while(p != NULL && q != NULL){
+        //当前线性表的元素更小
+        if(firstNode->element < q->element)
+            return true;
+        else if(firstNode->element > q->element)
+            //当前线性表的元素更大
+            return false;
+        p = p->next;
+        q = q->next;
+    }
+
+    //当前线性表的长度更小
+    if(p == NULL && q != NULL)
+        return true;
+    else
+        return false;
+}
+
+//重载<运算符
+template <class T>
+bool operator<(const chain<T>& theLeftChain, const chain<T>& theRightChain){
+    return theLeftChain.isLess(theRightChain);
+}
+
+//交换两个线性表
+template <class T>
+void chain<T>::swap(chain<T> &theChain) {
+    //交换两个指针
+    chainNode<T>* copyChain = theChain.firstNode;
+    theChain.firstNode = firstNode;
+    firstNode = copyChain;
+
+    //交换线性表的长度
+    int copyListsize = theChain.listSize;
+    theChain.listSize = listSize;
+    listSize = copyListsize;
+}
+
+//翻转链表
+template <class T>
+void chain<T>::reverse() {
+    //最多只有一个结点的情况下不变
+    if(listSize < 2) return;
+
+    chainNode<T>* currentNode = firstNode->next;
+    firstNode->next = NULL;
+    //迭代
+    while(currentNode != NULL){
+        chainNode<T>* nextNode = currentNode->next;
+        currentNode->next = firstNode;
+        firstNode = currentNode;
+        currentNode = nextNode;
+    }
+}
+
+//清表
+template <class T>
+void chain<T>::clear() {
+    //删除所有结点
+    while(firstNode != NULL){
+        //删除首结点
+        chainNode<T>* nextNode = firstNode->next;
+        delete firstNode;
+        firstNode = nextNode;
+    }
+    listSize = 0;
+}
+
 
 #endif //DSACPP_CHAIN_H

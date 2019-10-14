@@ -11,8 +11,6 @@
 #include "changeLength1D.h"
 #include "../MyExceptions.h"
 
-using namespace std;
-
 template <class T>
 class arrayList : public linearList<T>{
 public:
@@ -71,7 +69,7 @@ public:
     bool isLess(const arrayList<T>& theList) const;
 
     // 判断当前数组是否大于theList数组
-    bool isBig(const arrayList<T>& theList) const;
+    bool isBigger(const arrayList<T>& theList) const;
 
     //重载[]运算符
     T& operator[](int theIndex) {
@@ -310,12 +308,7 @@ void arrayList<T>::setSize(int theSize) {
     if(listSize > theSize){
         while(listSize > theSize)
             element[--listSize].~T();
-    } else if(theSize > arrayLength){
-        //数组空间已满，修改数组长度
-        changeLength1D(element, arrayLength, theSize + arrayLength);
-        arrayLength += theSize;
     }
-    listSize = theSize;
 }
 
 //改变数组的容量为当前容量和theCapacity的较大者
@@ -457,7 +450,7 @@ bool operator>=(const arrayList<T>& theLeftList, const arrayList<T>& theRightLis
 
 // 判断当前数组是否大于theList数组
 template <class T>
-bool arrayList<T>::isBig(const arrayList<T> &theList) const{
+bool arrayList<T>::isBigger(const arrayList<T> &theList) const{
     if(this == &theList)
         return false;
     //字典序的小于
@@ -480,13 +473,13 @@ bool arrayList<T>::isBig(const arrayList<T> &theList) const{
 // 重载 > 运算符
 template <class T>
 bool operator>(const arrayList<T>& theLeftList, const arrayList<T>& theRightList){
-    return theLeftList.isBig(theRightList);
+    return theLeftList.isBigger(theRightList);
 }
 
 //重载 <= 运算符
 template <class T>
 bool operator<=(const arrayList<T>& theLeftList, const arrayList<T>& theRightList){
-    return !theLeftList.isBig(theRightList);
+    return !theLeftList.isBigger(theRightList);
 }
 
 #endif //DSACPP_ARRAYLIST_H
