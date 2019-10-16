@@ -7,6 +7,8 @@
 
 #include <iostream>
 #include <sstream>
+#include <iterator>
+#include <algorithm>
 #include "linearList.h"
 #include "changeLength1D.h"
 #include "../MyExceptions.h"

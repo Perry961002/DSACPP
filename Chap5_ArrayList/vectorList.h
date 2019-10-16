@@ -5,10 +5,12 @@
 #ifndef DSACPP_VECTORLIST_H
 #define DSACPP_VECTORLIST_H
 
-#include "linearList.h"
 #include <vector>
 #include <sstream>
+#include <iterator>
+#include <algorithm>
 #include "../MyExceptions.h"
+#include "linearList.h"
 
 /**
  * 利用vector实现的基于数组的线性表

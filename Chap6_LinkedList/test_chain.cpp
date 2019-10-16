@@ -16,9 +16,13 @@ int main(){
     numChain1.setSize(15);
     cout << "numChain1: " << numChain1 << endl;
     cout << "numChain1 == numChain2: " << (numChain1 == numChain2) << endl;
-
+    cout << "numChain1.front(): " << numChain1.front() << endl;
+    numChain1.front() = 1;
+    cout << "after numChain1.front() = 1, numChain1: " << numChain1 << endl;
     numChain1.removeRange(11, 14);
+    cout << "after numChain1.removeRange(11, 14): " << numChain1 << endl;
     numChain1.set(4, 0);
+    cout << "after numChain1.set(4, 0): " << numChain1 << endl;
     cout << "numChain1: " << numChain1 << endl;
     cout << numChain1.lastIndexOf(0) << " " << numChain1.lastIndexOf(11) << endl;
     cout << "numChain1 == numChain2: " << (numChain1 == numChain2) << endl;
