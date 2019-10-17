@@ -28,7 +28,15 @@ public:
     void insert(int theIndex, const T& theElement);
     void output(ostream& out) const;
 
-    //习题里的函数
+    //首元素
+    T& front();
+
+    //从首部插入
+    void push_front(const T& theElement);
+
+    //从首部弹出
+    void pop_front();
+
     //使线性表的大小等于theSize
     void setSize(int theSize);
 
@@ -50,7 +58,7 @@ public:
     //交换两个线性表
     void swap(chain<T>& theChain);
 
-    //翻转xianxingb
+    //翻转线性表
     void reverse();
 
     //清表
@@ -185,6 +193,12 @@ T& chain<T>::get(int theIndex) const {
     return currentNode->element;
 }
 
+//获取首元素
+template <class T>
+T& chain<T>::front() {
+    return firstNode->element;
+}
+
 //返回元素theElement首次出现时的索引
 template <class T>
 int chain<T>::indexOf(const T &theElement) const {
@@ -252,6 +266,21 @@ void chain<T>::insert(int theIndex, const T &theElement) {
         p->next = new chainNode<T>(theElement, p->next);
     }
     ++listSize;
+}
+
+//从首部插入元素
+template <class T>
+void chain<T>::push_front(const T &theElement) {
+    firstNode = new chainNode<T>(theElement, firstNode);
+    ++listSize;
+}
+
+//从首部弹出
+template <class T>
+void chain<T>::pop_front() {
+    chainNode<T>* deleteNode = firstNode;
+    firstNode = firstNode->next;
+    delete deleteNode;
 }
 
 //把元素插入到一个输出流
