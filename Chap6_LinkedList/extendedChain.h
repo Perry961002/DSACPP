@@ -12,10 +12,11 @@
 template <class T>
 class extendedChain : public extendedLinearList<T>, public chain<T>{
 public:
-    //构造函数、复制构造函数
+    //构造函数、复制构造函数和析构函数
     extendedChain(int initialCapacity = 10) : chain<T>::chain(initialCapacity) {}
-    extendedChain(const extendedChain<T>& theList) : chain<T>::chain(theList) {}
-
+    extendedChain(const extendedChain<T>& theList) : chain<T>::chain(theList), lastNode(theList.lastNode) {}
+    ~extendedChain() {delete lastNode;}
+    
     //ADT方法
     bool empty() const {return chain<T>::empty();}
     int size() const {return chain<T>::size();}
@@ -153,6 +154,7 @@ void extendedChain<T>::clear() {
         delete chain<T>::firstNode;
         chain<T>::firstNode = nextNode;
     }
+    lastNode = NULL;
     chain<T>::listSize = 0;
 }
 
@@ -200,9 +202,10 @@ void extendedChain<T>::insert(int theIndex, const T &theElement) {
         else
             //在非空链表头插入
             chain<T>::firstNode = new chainNode<T>(theElement, chain<T>::firstNode);
-    }else if(theIndex == chain<T>::listSize)
-        this->push_back(theElement);
-    else{
+    }else if(theIndex == chain<T>::listSize) {
+        lastNode->next = new chainNode<T>(theElement, NULL);
+        lastNode = lastNode->next;
+    } else{
         //需要插入索引的前驱
         chainNode<T>* p = chain<T>::firstNode;
         for(int i = 0; i < theIndex - 1; ++i)

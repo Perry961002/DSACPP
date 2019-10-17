@@ -35,7 +35,7 @@ public:
     // 增加的方法
     int capacity() const {return (int) element->capacity();}
 
-    // 线性表的起始和结束位置的迭代器
+    //随机访问迭代器
     typedef typename vector<T>::iterator iterator;
     iterator begin() {return element->begin();}
     iterator end() {return element->end();}

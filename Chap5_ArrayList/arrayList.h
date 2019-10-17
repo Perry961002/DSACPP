@@ -93,7 +93,7 @@ public:
     // 内部类, 迭代器，可以随机访问
     class iterator{
     public:
-        typedef bidirectional_iterator_tag iterator_category;  // 双向迭代器
+        typedef random_access_iterator_tag iterator_category;  // 随机访问迭代器
         typedef T value_type;  //迭代器指向的数据类型
         typedef ptrdiff_t difference_type; // 标准库里一种与机器相关的数据类型，常用来表示两个指针相减的结果
         typedef T* pointer;  //指针
