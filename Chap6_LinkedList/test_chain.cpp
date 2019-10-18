@@ -13,6 +13,8 @@ int main(){
         numChain1.insert(i, i);
         numChain2.insert(i, i);
     }
+    numChain1.pop_front();
+    cout << "after numChain1.pop_front(): " << numChain1 << endl << "numChain1.size(): " << numChain1.size() << endl;
     numChain1.setSize(15);
     cout << "numChain1: " << numChain1 << endl;
     cout << "numChain1 == numChain2: " << (numChain1 == numChain2) << endl;

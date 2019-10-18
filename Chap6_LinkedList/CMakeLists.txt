@@ -8,4 +8,4 @@ add_executable(Chap6_chain chainNode.h chain.h test_chain.cpp)
 
 add_executable(Chap6_extendedChain extendedLinearList.h extendedChain.h test_extendedChain.cpp)
 
-add_executable(Chap6_cricularList circularListWithHeader.h test_circularListWithHeader.cpp)
+add_executable(Chap6_circularList circularListWithHeader.h test_circularListWithHeader.cpp)
