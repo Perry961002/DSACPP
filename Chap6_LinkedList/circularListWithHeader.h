@@ -16,7 +16,7 @@ template <class T>
 class circularListWithHeader : public extendedLinearList<T> {
 public:
     //构造函数和析构函数
-    circularListWithHeader();
+    circularListWithHeader(int initialCapacity = 10);
     ~circularListWithHeader();
 
     //ADT函数
@@ -127,7 +127,12 @@ protected:
 
 //构造函数
 template <class T>
-circularListWithHeader<T>::circularListWithHeader() {
+circularListWithHeader<T>::circularListWithHeader(int initialCapacity) {
+    if(initialCapacity < 1){
+        ostringstream s;
+        s << "Initial capacity = " << initialCapacity << "Must be > 0";
+        throw illegalParameterValue(s.str());
+    }
     headerNode = new chainNode<T>();
     headerNode->next = headerNode;
     listSize = 0;
