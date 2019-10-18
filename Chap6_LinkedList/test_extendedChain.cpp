@@ -23,7 +23,8 @@ int main(){
     cout << endl;
     cout << "numChain1.back(): " << numChain1.back() << endl;
     cout << "numChain1 == numChain2: " << numChain1.isEqual(numChain2) << endl;
-
+    numChain1.push_back(55);
+    cout << numChain1 << endl;
     extendedChain<int> numChain3;
     //numChain3.insert(0, 1);
     numChain3.push_front(1);

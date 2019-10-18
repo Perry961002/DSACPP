@@ -20,5 +20,13 @@ struct chainNode{
     }
 };
 
+//交换两个结点
+template <class T>
+void swapNode(chainNode<T>& theNode, chainNode<T>& anotherNode){
+    chainNode<T> temp = theNode;
+    theNode = anotherNode;
+    anotherNode = temp;
+}
+
 
 #endif //DSACPP_CHAINNODE_H

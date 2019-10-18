@@ -15,7 +15,7 @@ public:
     //构造函数、复制构造函数和析构函数
     extendedChain(int initialCapacity = 10) : chain<T>::chain(initialCapacity) {}
     extendedChain(const extendedChain<T>& theList) : chain<T>::chain(theList), lastNode(theList.lastNode) {}
-    ~extendedChain() {delete lastNode;}
+    ~extendedChain() {}
     
     //ADT方法
     bool empty() const {return chain<T>::empty();}

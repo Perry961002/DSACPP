@@ -281,6 +281,7 @@ void chain<T>::pop_front() {
     chainNode<T>* deleteNode = firstNode;
     firstNode = firstNode->next;
     delete deleteNode;
+    --listSize;
 }
 
 //把元素插入到一个输出流
@@ -386,7 +387,7 @@ bool chain<T>::isEqual(const chain<T> &theChain) const {
 
     //比较每一个元素
     chainNode<T> *p = firstNode, *q = theChain.firstNode;
-    while(p != NULL && q != NULL){
+    while(p != NULL){
         //遇到不一样的元素就返回false
         if(p->element != q->element)
             return false;
