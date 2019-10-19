@@ -346,18 +346,26 @@ void chain<T>::removeRange(int fromIndex, int toIndex) {
         s << "Index  from" << fromIndex << " to " << toIndex << " size = " << listSize;
         throw illegalParameterValue(s.str());
     }
-
-    //找到开始删除结点的前驱结点
-    chainNode<T>* p = firstNode;
-    for(int i = 0; i < fromIndex - 1; ++i)
-        p = p->next;
-    int needDeleteNum = (toIndex - fromIndex + 1);
-    while(needDeleteNum > 0){
-        chainNode<T>* currentNode = p->next;
-        p->next = currentNode->next;
-        delete currentNode;
-        --needDeleteNum;
+    if(fromIndex == 0){
+        for(int i = 0; i <= toIndex; ++i){
+            chainNode<T>* p = firstNode;
+            firstNode = firstNode->next;
+            delete p;
+        }
+    } else{
+        //找到开始删除结点的前驱结点
+        chainNode<T>* p = firstNode;
+        for(int i = 0; i < fromIndex - 1; ++i)
+            p = p->next;
+        int needDeleteNum = (toIndex - fromIndex + 1);
+        while(needDeleteNum > 0){
+            chainNode<T>* currentNode = p->next;
+            p->next = currentNode->next;
+            delete currentNode;
+            --needDeleteNum;
+        }
     }
+
     listSize -= (toIndex - fromIndex + 1);
 }
 

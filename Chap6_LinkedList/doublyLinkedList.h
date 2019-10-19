@@ -6,6 +6,7 @@
 #define DSACPP_DOUBLYLINKEDLIST_H
 
 #include <sstream>
+#include <algorithm>
 #include "extendedLinearList.h"
 #include "../MyExceptions.h"
 
@@ -59,9 +60,6 @@ public:
     void pop_front();
     //尾弹出
     void pop_back();
-
-    //删除索引fromIndex至toIndex之间的元素
-    void removeRange(int fromIndex, int toIndex);
 
     //反转链表
     void reverse();
@@ -220,6 +218,77 @@ int doublyLinkedList<T>::indexOf(const T &theElement) const {
     return -1;
 }
 
+//删除索引theIndex上的元素
+template <class T>
+void doublyLinkedList<T>::erase(int theIndex) {
+    //如果索引无效，则抛出异常
+    checkIndex(theIndex);
+
+    //删除首结点
+    if(theIndex == 0)
+        this->pop_front();
+    else if(theIndex == listSize - 1){
+        //至少两个结点，删除尾结点
+        chainNode<T>* deleteNode = lastNode;
+        lastNode = lastNode->previous;
+        delete deleteNode;
+        --listSize;
+    } else if(theIndex < (listSize / 2)){
+        chainNode<T>* currendNode = firstNode;
+        for(int i = 0; i < theIndex; ++i)
+            currendNode = currendNode->next;
+        currendNode->previous->next = currendNode->next;
+        currendNode->next->previous = currendNode->previous;
+        delete currendNode;
+        --listSize;
+    } else{
+        chainNode<T>* currendNode = lastNode;
+        for(int i = listSize - 1; i > theIndex; --i)
+            currendNode = currendNode->previous;
+        currendNode->previous->next = currendNode->next;
+        currendNode->next->previous = currendNode->previous;
+        delete currendNode;
+        --listSize;
+    }
+}
+
+//在索引为theIndex的位置上插入新元素theElement
+template <class T>
+void doublyLinkedList<T>::insert(int theIndex, const T &theElement) {
+    //先检查索引是否有效
+    if(theIndex < 0 || theIndex > listSize){
+        //无效索引
+        ostringstream s;
+        s << "index = " << theIndex << " size = " << listSize;
+        throw illegalIndex(s.str());
+    }
+    //插入首结点
+    if(theIndex == 0)
+        this->push_front(theElement);
+    else if(theIndex == listSize - 1){
+        //至少一个结点，插入尾结点
+        lastNode->next = new chainNode<T>(theElement, lastNode, NULL);
+        lastNode = lastNode->next;
+        ++listSize;
+    } else if(theIndex < (listSize / 2)){
+        chainNode<T>* currendNode = firstNode;
+        for(int i = 0; i < theIndex - 1; ++i)
+            currendNode = currendNode->next;
+        chainNode<T>* p = currendNode->next;
+        currendNode->next = new chainNode<T>(theElement, currendNode, currendNode->next);
+        p->previous = currendNode->next;
+        ++listSize;
+    } else{
+        chainNode<T>* currendNode = lastNode;
+        for(int i = listSize - 1; i >= theIndex; --i)
+            currendNode = currendNode->previous;
+        chainNode<T>* p = currendNode->next;
+        currendNode->next = new chainNode<T>(theElement, currendNode, currendNode->next);
+        p->previous = currendNode->next;
+        ++listSize;
+    }
+}
+
 //将元素输出到输出流
 template <class T>
 void doublyLinkedList<T>::output(ostream &out) const {
@@ -232,6 +301,172 @@ template <class T>
 ostream& operator<<(ostream& out, const doublyLinkedList<T>& theList){
     theList.output(out);
     return out;
+}
+
+//将索引为theIndex的元素值设置为theElement
+template <class T>
+void doublyLinkedList<T>::set(int theIndex, const T &theElement) {
+    //如果索引无效，则抛出异常
+    checkIndex(theIndex);
+
+    chainNode<T>* currendNode;
+    //theIndex在前半部分
+    if(theIndex < (listSize / 2)){
+        currendNode = firstNode;
+        for(int i = 0; i < theIndex; ++i)
+            currendNode = currendNode->next;
+    } else{
+        currendNode = lastNode;
+        for(int i = listSize - 1; i > theIndex; --i)
+            currendNode = currendNode->previous;
+    }
+    currendNode->element = theElement;
+}
+
+//首插入
+template <class T>
+void doublyLinkedList<T>::push_front(const T &theElement) {
+    if(firstNode == NULL)
+        //空表
+        firstNode = lastNode = new chainNode<T>(theElement, NULL, NULL);
+    else{
+        firstNode->previous = new chainNode<T>(theElement, NULL, firstNode);
+        firstNode = firstNode->previous;
+    }
+    ++listSize;
+}
+
+//尾插入
+template <class T>
+void doublyLinkedList<T>::push_back(const T &theElement) {
+    if(lastNode == NULL)
+        //空表
+        firstNode = lastNode = new chainNode<T>(theElement, NULL, NULL);
+    else{
+        lastNode->next = new chainNode<T>(theElement, lastNode, NULL);
+        lastNode = lastNode->next;
+    }
+    ++listSize;
+}
+
+//首弹出
+template <class T>
+void doublyLinkedList<T>::pop_front() {
+    //只有一个元素
+    if(firstNode == lastNode && firstNode != NULL) {
+        firstNode = lastNode = NULL;
+        listSize = 0;
+    } else{
+        chainNode<T>* deleteNode = firstNode;
+        firstNode = firstNode->next;
+        delete deleteNode;
+        --listSize;
+    }
+}
+
+//尾弹出
+template <class T>
+void doublyLinkedList<T>::pop_back() {
+    //只有一个元素
+    if(firstNode == lastNode && lastNode != NULL){
+        firstNode = lastNode = NULL;
+        listSize = 0;
+    } else{
+        chainNode<T>* deleteNode = lastNode;
+        lastNode = lastNode->previous;
+        delete deleteNode;
+        --listSize;
+    }
+}
+
+//判断*this是否和theList相等
+template <class T>
+bool doublyLinkedList<T>::isEqual(const doublyLinkedList<T> &theList) const {
+    //同一个表，直接返回true
+    if(this == &theList)
+        return true;
+    //长度不等，直接返回false
+    if(listSize != theList.listSize)
+        return false;
+
+    //从两个方向开始比较
+    chainNode<T> *currentFirst = firstNode, *currentEnd = lastNode;
+    chainNode<T> *anotherFirst = theList.firstNode, *anotherEnd = theList.lastNode;
+    while (currentFirst != currentEnd){
+        //遇到不等的元素
+        if(currentFirst->element != anotherFirst->element)
+            return false;
+        if(currentEnd->element != anotherEnd->element)
+            return false;
+        currentFirst = currentFirst->next;
+        currentEnd = currentEnd->previous;
+        anotherFirst = anotherFirst->next;
+        anotherEnd = anotherEnd->previous;
+    }
+    return (currentFirst->element == anotherFirst->element);
+}
+
+//重载==运算符
+template <class T>
+bool operator==(const doublyLinkedList<T> &theLeftList, const doublyLinkedList<T> &theRightList){
+    return theLeftList.isEqual(theRightList);
+}
+
+//判断*this是否小于theList
+template <class T>
+bool doublyLinkedList<T>::isLess(const doublyLinkedList<T> &theList) const {
+    //是同一个线性表
+    if(this == &theList)
+        return false;
+
+    //比较每一个元素
+    chainNode<T> *p = firstNode, *q = theList.firstNode;
+    while(p != NULL && q != NULL){
+        //当前线性表的元素更小
+        if(firstNode->element < q->element)
+            return true;
+        else if(firstNode->element > q->element)
+            //当前线性表的元素更大
+            return false;
+        p = p->next;
+        q = q->next;
+    }
+
+    //当前线性表的长度更小
+    if(p == NULL && q != NULL)
+        return true;
+    else
+        return false;
+}
+
+//重载<运算符
+template <class T>
+bool operator<(const doublyLinkedList<T> &theLeftList, const doublyLinkedList<T> &theRightList){
+    return theLeftList.isLess(theRightList);
+}
+
+//反转链表
+template <class T>
+void doublyLinkedList<T>::reverse() {
+    //交换firstNode和lastNode
+    chainNode<T>* copyNode = firstNode;
+    firstNode = lastNode;
+    lastNode = copyNode;
+}
+
+//交换两个链表
+template <class T>
+void doublyLinkedList<T>::swap(doublyLinkedList<T> &theList) {
+    //交换两个firstNode和lastNode
+    chainNode<T>* copyNode = firstNode;
+    firstNode = theList.firstNode;
+    theList.firstNode = copyNode;
+
+    copyNode = lastNode;
+    lastNode = theList.firstNode;
+    theList.lastNode = copyNode;
+
+    swap(listSize, theList.listSize);
 }
 
 //清表
