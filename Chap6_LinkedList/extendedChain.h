@@ -55,7 +55,7 @@ public:
     void swap(extendedChain<T>& theList);
 
     //父类chain中可直接利用的函数
-    void set(int theIndex, const T& theElement) {chain<T>::set(theIndex, theElement);}
+    void set(int theIndex, const T& theElement);
     int lastIndexOf(const T& theElement) const {return chain<T>::lastIndexOf(theElement);}
 
     //利用父类chain来实现自己的函数
@@ -184,6 +184,15 @@ void extendedChain<T>::setSize(int theSize) {
     }
 }
 
+//将索引为theIndex的元素值改为theElement
+template <class T>
+void extendedChain<T>::set(int theIndex, const T &theElement) {
+    if(theIndex == chain<T>::listSize - 1)
+        lastNode->element = theElement;
+    else
+        chain<T>::set(theIndex, theElement);
+}
+
 //把元素theElement插入到线性表中索引为theIndeex的地方
 template <class T>
 void extendedChain<T>::insert(int theIndex, const T &theElement) {
@@ -259,20 +268,31 @@ void extendedChain<T>::removeRange(int fromIndex, int toIndex) {
         s << "Index  from" << fromIndex << " to " << toIndex << " size = " << chain<T>::listSize;
         throw illegalParameterValue(s.str());
     }
-    //找到开始删除结点的前驱结点
-    chainNode<T>* p = chain<T>::firstNode;
-    for(int i = 0; i < fromIndex - 1; ++i)
-        p = p->next;
-    int needDeleteNum = (toIndex - fromIndex + 1);
-    while(needDeleteNum > 0){
-        chainNode<T>* currentNode = p->next;
-        p->next = currentNode->next;
-        delete currentNode;
-        --needDeleteNum;
+    if(fromIndex == 0){
+        for(int i = 0; i <= toIndex; ++i){
+            chainNode<T>* p = chain<T>::firstNode;
+            chain<T>::firstNode = chain<T>::firstNode->next;
+            delete p;
+        }
+        if(toIndex == chain<T>::listSize - 1)
+            lastNode = NULL;
+    } else{
+        //找到开始删除结点的前驱结点
+        chainNode<T>* p = chain<T>::firstNode;
+        for(int i = 0; i < fromIndex - 1; ++i)
+            p = p->next;
+        int needDeleteNum = (toIndex - fromIndex + 1);
+        while(needDeleteNum > 0){
+            chainNode<T>* currentNode = p->next;
+            p->next = currentNode->next;
+            delete currentNode;
+            --needDeleteNum;
+        }
+        //末尾元素也在删除范围里
+        if(toIndex == chain<T>::listSize - 1)
+            lastNode = p;
     }
-    //末尾元素也在删除范围里
-    if(toIndex == chain<T>::listSize - 1)
-        lastNode = p;
+    
     chain<T>::listSize -= (toIndex - fromIndex + 1);
 }
 

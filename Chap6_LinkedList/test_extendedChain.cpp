@@ -33,6 +33,10 @@ int main(){
     cout << numChain3.back() << endl;
     numChain3.push_back(2);
     cout << numChain3 << endl;
+    numChain1.removeRange(0, 4);
+    cout << numChain1 << endl;
+
+
     numChain1.clear();
     
     return 0;
