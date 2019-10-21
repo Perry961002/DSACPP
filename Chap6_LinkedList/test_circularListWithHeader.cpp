@@ -41,9 +41,12 @@ int main(){
     cout << "after numCircular1.swap(numCircular2), numCircular2: " << numCircular2 << endl;
     numCircular1.push_back(55);
     numCircular2.push_back(66);
-    cout << "after numCircular1.swap(numCircular2), numCircular1: " << numCircular1 << endl;
-    cout << "after numCircular1.swap(numCircular2), numCircular2: " << numCircular2 << endl;
+    cout << "after numCircular1.push_back(55): " << numCircular1 << endl;
+    cout << "after numCircular2.push_back(66): " << numCircular2 << endl;
     cout << numCircular1.size() << " " << numCircular2.size() << endl;
+    cout << "from ++end() to end(): ";
+    for(auto it = ++numCircular1.end(); it != numCircular1.end(); ++it)
+        cout << *it << " ";
     numCircular1.clear();
     numCircular2.clear();
     return 0;

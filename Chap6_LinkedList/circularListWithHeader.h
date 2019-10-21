@@ -111,7 +111,7 @@ public:
     };
 
     //首元素的迭代器
-    iterator begin() {return headerNode->next == headerNode ? NULL : headerNode->next;}
+    iterator begin() {return headerNode->next;}
 
     //尾元素的下一个位置
     iterator end() {return lastNode->next;}
