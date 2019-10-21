@@ -10,4 +10,4 @@ add_executable(Chap6_extendedChain extendedLinearList.h extendedChain.h test_ext
 
 add_executable(Chap6_circularList circularListWithHeader.h test_circularListWithHeader.cpp)
 
-add_executable(Chap6_doublyLinkedList doublyLinkedList.h test_doublyLinkedList.cpp)
+add_executable(Chap6_doublyList doublyLinkedListWithHeader.h test_doublyLinkedListWithHeader.cpp)
