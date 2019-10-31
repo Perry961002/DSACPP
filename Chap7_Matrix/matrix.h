@@ -64,17 +64,17 @@ private:
 
 // 构造函数和复制构造函数
 template <class T>
-matrix<T>::matrix(int theRows, int theColums) {
+matrix<T>::matrix(int theRows, int theColumns) {
     // 检查参数的有效性，可以生成行数和列数都大于0的矩阵，也可以生成0*0的矩阵
-    if (theRows < 0 || theColums < 0)
+    if (theRows < 0 || theColumns < 0)
         throw illegalParameterValue("Rows and Columns must be >= 0");
-    if ((theRows ==0 || theColums == 0) && (theRows != 0 || theColums != 0))
+    if ((theRows ==0 || theColumns == 0) && (theRows != 0 || theColumns != 0))
         throw illegalParameterValue("Either both or neither rows and columns should be zero");
 
     // 创建行主映射矩阵
     this->theRows = theRows;
-    this->theColumns = theColums;
-    this->element = new T [theRows * theColums];
+    this->theColumns = theColumns;
+    this->element = new T [theRows * theColumns];
 }
 
 template <class T>

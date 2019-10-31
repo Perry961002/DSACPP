@@ -73,6 +73,9 @@ public:
     // 判断当前数组是否大于theList数组
     bool isBigger(const arrayList<T>& theList) const;
 
+    //设置表的大小，用在第7章的稀疏矩阵中
+    void reSet(int theSize);
+
     //重载[]运算符
     T& operator[](int theIndex) {
         //返回数组在索引theIndex上的引用
@@ -482,6 +485,22 @@ bool operator>(const arrayList<T>& theLeftList, const arrayList<T>& theRightList
 template <class T>
 bool operator<=(const arrayList<T>& theLeftList, const arrayList<T>& theRightList){
     return !theLeftList.isBigger(theRightList);
+}
+
+//设置表的大小，用在第7章的稀疏矩阵中
+template <class T>
+void arrayList<T>::reSet(int theSize) {
+    if (theSize < 0) {
+        ostringstream s;
+        s << "Requested size = " << theSize << " Must be >= 0";
+        throw illegalParameterValue(s.str());
+    }
+    if (theSize > arrayLength) {
+        delete element;
+        element = new T[theSize];
+        arrayLength = listSize;
+    }
+    listSize = theSize;
 }
 
 #endif //DSACPP_ARRAYLIST_H
