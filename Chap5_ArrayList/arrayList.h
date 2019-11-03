@@ -140,7 +140,7 @@ public:
         iterator& operator-=(int n){position -= n; return *this;}
 
         // 计算指针之间距离的差值
-        difference_type operator-(const iterator& theIterator) const{ return position - theIterator.position;}
+        int operator-(const iterator& theIterator) const{ return position - theIterator.position;}
 
         //测试是否相等
         bool operator!=(const iterator right) const {return position != right.position;}
