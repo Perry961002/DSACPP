@@ -8,6 +8,7 @@
 //双端队列的抽象类
 template <class T>
 class Deque {
+public:
     //虚析构
     virtual ~Deque() {}
 
