@@ -91,6 +91,18 @@ private:
     string message;
 };
 
+// deque is empty
+class dequeEmpty
+{
+public:
+    dequeEmpty(string theMessage =
+            "Invalid operation on empty queue")
+    {message = theMessage;}
+    void outputMessage() {cout << message << endl;}
+private:
+    string message;
+};
+
 // hash table is full
 class hashTableFull
 {
