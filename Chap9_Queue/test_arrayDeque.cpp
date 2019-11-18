@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "arraydeque.h"
+#include "arrayDeque.h"
 
 using namespace std;
 
