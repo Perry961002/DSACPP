@@ -48,7 +48,7 @@ public:
         root = NULL; treeSize = 0;
     }
 
-private:
+protected:
     binaryTreeNode<E> *root;  //指向根结点的指针
     int treeSize;  //树的结点个数
     static void (*visit) (binaryTreeNode<E>*);  //访问函数指针
