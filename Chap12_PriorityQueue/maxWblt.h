@@ -1,9 +1,9 @@
 //
-// Created by perry on 2019/12/6.
+// Created by perry on 2019/12/9.
 //
 
-#ifndef DSACPP_MAXHBLT_H
-#define DSACPP_MAXHBLT_H
+#ifndef DSACPP_MAXWBLT_H
+#define DSACPP_MAXWBLT_H
 
 #include <utility>
 #include <algorithm>
@@ -11,9 +11,9 @@
 #include "../MyExceptions.h"
 #include "maxPriorityQueue.h"
 
-//最大高度优先左高树
+//最大重量优先左高树
 template <class T>
-class maxHblt : public maxPriorityQueue<T>, linkedBinaryTree<std::pair<int, T>> {
+class maxWblt : public maxPriorityQueue<T>, linkedBinaryTree<std::pair<int, T>> {
 public:
     //判断是否为空
     bool empty() const { return this->treeSize == 0;}
@@ -34,7 +34,7 @@ public:
     void initialize(T *theElements, int theSize);
 
     //合并另一个棵树
-    void meld(maxHblt<T> &theHblt);
+    void meld(maxWblt<T> &theWblt);
 
     typedef binaryTreeNode<std::pair<int, T>> pairType;
 private:
@@ -42,69 +42,63 @@ private:
     void meld(binaryTreeNode<std::pair<int, T>> *&, binaryTreeNode<std::pair<int, T>> *&);
 };
 
-//返回最大元素的引用
+//队列最大元素的引用
 template <class T>
-const T& maxHblt<T>::top() {
+const T& maxWblt<T>::top() {
+    //如果树为空，则返回异常
     if (this->treeSize == 0)
         throw queueEmpty();
 
     return this->root->element.second;
 }
 
-//私有方法 合并两棵左高树
+//私有方法 合并以 x 和 y 为根的左高树，合并后的左高树以 x 为根
 template <class T>
-void maxHblt<T>::meld(binaryTreeNode<pair<int, T>> *&x, binaryTreeNode<pair<int, T>> *&y) {
-    //合并以 x 和 y 为根的两棵左高树，合并后的左高树以 x 为根
-    if (y == NULL) return;
-    if (x == NULL) { x = y; return;}
+void maxWblt<T>::meld(binaryTreeNode<pair<int, T>> *&x, binaryTreeNode<pair<int, T>> *&y) {
+    if (y == NULL)  //y为空
+        return;
+    if (x == NULL) {
+        //x为空
+        x = y;
+        return;
+    }
 
-    //保证 x 是根结点的较大者
+    //保证 x 指向根结点较大的树
     if (x->element.second < y->element.second)
         std::swap(x, y);
 
-    //递归的把 y 合并到 x->rightChild
+    //递归的把 y 合并到 x->rightChild 上
     meld(x->rightChild, y);
 
-    //如果 x 是叶子结点的话，现在 x 不是左高树，需要交换 x 的左右子结点
+    //x 的左子树为空，交换两个子树
     if (x->leftChild == NULL) {
         x->leftChild = x->rightChild;
         x->rightChild = NULL;
-        x->element.first = 1;  //因为 x->rightChild 的 s 值是 0
+        x->element.first = x->leftChild->element.first + 1;  //更新 x 的 w 值
     } else {
-        //保证 x->leftChild 的 s 值是较大的
+        //保证左子树的 w 值为较大的那个
         if (x->leftChild->element.first < x->rightChild->element.first)
             std::swap(x->leftChild, x->rightChild);
-
-        //更新 x 的 s 值
-        x->element.first = x->rightChild->element.first + 1;  //左高树的右子树的 s 值 是较小的那个
+        //更新 w 值
+        x->element.first = x->leftChild->element.first + x->rightChild->element.first + 1;
     }
 }
 
-//公有方法 合并另一颗左高树到*this上
+//公有方法，合并两个最大重量优先的左高树描述的优先队列
 template <class T>
-void maxHblt<T>::meld(maxHblt<T> &theHblt) {
+void maxWblt<T>::meld(maxWblt<T> &theWblt) {
     //合并两个对象里面的左高树
-    meld(this->root, theHblt.root);
-    this->treeSize += theHblt.treeSize;
+    meld(this->root, theWblt.root);
+    this->treeSize += theWblt.treeSize;
     //theHblt现在是空的
-    theHblt.root = NULL;
-    theHblt.treeSize = 0;
+    theWblt.root = NULL;
+    theWblt.treeSize = 0;
 }
 
-//插入元素
+//删除队列的最大元素
 template <class T>
-void maxHblt<T>::push(const T &theElement) {
-    //建立只有一个结点，并且值是theElement的左高树
-    pairType *x = new pairType (std::make_pair(1, theElement));
-
-    //将 x 合并到 root 上
-    meld(this->root, x);
-    ++(this->treeSize);
-}
-
-//删除最大元素
-template <class T>
-void maxHblt<T>::pop() {
+void maxWblt<T>::pop() {
+    //如果为空，抛出异常
     if (this->treeSize == 0)
         throw queueEmpty();
 
@@ -116,9 +110,20 @@ void maxHblt<T>::pop() {
     --(this->treeSize);
 }
 
-//初始化
+//插入元素theElement
 template <class T>
-void maxHblt<T>::initialize(T *theElements, int theSize) {
+void maxWblt<T>::push(const T &theElement) {
+    //建立只有一个结点，并且值是theElement的左高树
+    pairType *x = new pairType (std::make_pair(1, theElement));
+
+    //将 x 合并到 root 上
+    meld(this->root, x);
+    ++(this->treeSize);
+}
+
+//初始化一棵重量优先左高树
+template <class T>
+void maxWblt<T>::initialize(T *theElements, int theSize) {
     //用每个元素值建立出只有一个结点的左高树并放入队列中
     //然后依次弹出队列的前两个进行合并，并重新放入队列，直到队列中只有一个树
     arrayQueue<pairType *> Q(theSize);
@@ -142,4 +147,4 @@ void maxHblt<T>::initialize(T *theElements, int theSize) {
     this->treeSize = theSize;
 }
 
-#endif //DSACPP_MAXHBLT_H
+#endif //DSACPP_MAXWBLT_H
