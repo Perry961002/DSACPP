@@ -14,4 +14,4 @@ add_executable(Chap12_maxHblt ../Chap11_BinaryTree/binaryTree.h maxHblt.h maxPri
 
 add_executable(Chap12_maxWblt ../Chap11_BinaryTree/binaryTree.h maxPriorityQueue.h maxWblt.h test_maxWblt.cpp)
 
-add_executable(Chap12_huffmanTree minHeap.h huffmanTree.h)
+add_executable(Chap12_huffmanTree minHeap.h huffmanTree.h test_huffmanTree.cpp)
