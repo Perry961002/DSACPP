@@ -10,4 +10,8 @@ add_executable(Chap12_maxHeap maxPriorityQueue.h maxHeap.h ../MyExceptions.h ../
 
 add_executable(Chap12_heapSort heapSort.h test_heapSort.cpp)
 
-add_executable(Chap12_maxHblt ../Chap11_BinaryTree/binaryTreeNode.h maxHblt.h maxPriorityQueue.h test_maxHblt.cpp)
+add_executable(Chap12_maxHblt ../Chap11_BinaryTree/binaryTree.h maxHblt.h maxPriorityQueue.h test_maxHblt.cpp)
+
+add_executable(Chap12_maxWblt ../Chap11_BinaryTree/binaryTree.h maxPriorityQueue.h maxWblt.h test_maxWblt.cpp)
+
+add_executable(Chap12_huffmanTree minHeap.h huffmanTree.h)
