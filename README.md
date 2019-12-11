@@ -14,7 +14,7 @@
     
         ![](images/qrcode.jpeg)
 
-## 英文版PDF资源
+# 英文版PDF资源
 
 - 百度网盘链接
 
