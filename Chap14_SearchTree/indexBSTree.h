@@ -5,6 +5,7 @@
 #ifndef DSACPP_INDEXBSTREE_H
 #define DSACPP_INDEXBSTREE_H
 
+#include <utility>
 #include "bsTree.h"
 
 //索引二叉搜索树的抽象类
@@ -15,7 +16,7 @@ public:
     virtual std::pair<const K, E>* get(int) const = 0;
 
     //删除给定索引对应的数对
-    virtual void delete(int) = 0;
+    virtual void erase(int) = 0;
 };
 
 #endif //DSACPP_INDEXBSTREE_H
